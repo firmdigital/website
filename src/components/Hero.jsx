@@ -10,20 +10,20 @@ function Hero() {
           alt="hero"
           className="w-full object-cover h-[500px]"
         />
-        <div className="w-full absolute inset-0  h-[500px] bg-black/70 md:pt-20 pt-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
+        <div className="w-full absolute inset-0 h-[500px] bg-black/70 md:pt-20 pt-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
           <div className="flex flex-col items-start gap-6 justify-evenly">
             <h1 className="md:text-5xl text-3xl text-white">
               Construisons ensemble vos <br />
-              <span className="font-bold text-[#5FC4E6]">
+              <span className="font-bold text-[#5FC4E6] hover:text-orange-500">
                 projets digitaux.
               </span>
             </h1>
-            <span className="text-white font-light max-w-xl text-justify md:text-base text-sm">
+            <p className="text-white font-light max-w-xl text-justify md:text-lg text-base">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
-            </span>
+            </p>
           </div>
         </div>
 
@@ -31,7 +31,7 @@ function Hero() {
         <img
           src="../assets/polygon.png"
           alt="polygon"
-          className="absolute -bottom-60"
+          className="absolute -bottom-60 xl:left-0 -left-16"
         />
 
         {/* Call to action */}

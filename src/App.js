@@ -1,8 +1,9 @@
+import Agence from "./components/Agence";
 
 function App() {
   return (
-   <div>
-    
+   <div className="w-full pt-60">
+    <Agence />
    </div>
   );
 }
