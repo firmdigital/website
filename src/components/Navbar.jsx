@@ -5,9 +5,9 @@ function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <div className="w-full bg-black py-5 mx-auto max-w-[1920px] xl:px-20 md:px-4 px-4">
+    <div className="w-full bg-black py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
       {/* Desktop Menu */}
-      <div className="md:flex hidden w-full items-center lg:justify-evenly md:justify-between gap-8">
+      <div className="md:flex hidden w-full items-center justify-between gap-8">
         {/* Logo */}
         <a
           href="/"
@@ -73,7 +73,7 @@ function Navbar() {
 
         {/* Sidebar Mobile menu */}
         {mobileMenu && (
-          <div className="h-full translate-x-[-0%] ease-in-out transition-all duration-500 bg-white absolute inset-0 p-5">
+          <div className="h-full z-50 translate-x-[-0%] ease-in-out transition-all duration-500 bg-white absolute inset-0 p-5">
             <div className="flex items-center justify-between">
               <a
                 href="/"
