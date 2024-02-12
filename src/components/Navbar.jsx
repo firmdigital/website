@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navlinks } from "../Navlinks";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
+
+  useEffect(() => {
+    if (mobileMenu) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  
+    // Nettoyage : s'exécute lorsque le composant est démonté ou avant que l'effet se réexécute
+    return () => document.body.classList.remove('no-scroll');
+  }, [mobileMenu]); // Les crochets indiquent que l'effet dépend de l'état de `mobileMenu`
 
   return (
     <div className="w-full bg-black py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
@@ -61,7 +72,9 @@ function Navbar() {
             strokeWidth={1.5}
             stroke="currentColor"
             className="w-8 h-8 text-white cursor-pointer transition-all duration-500 hover:scale-95"
-            onClick={() => setMobileMenu(true)}
+            onClick={() => {
+              setMobileMenu(!mobileMenu);
+            }}
           >
             <path
               strokeLinecap="round"
@@ -73,7 +86,7 @@ function Navbar() {
 
         {/* Sidebar Mobile menu */}
         {mobileMenu && (
-          <div className="h-full z-50 translate-x-[-0%] ease-in-out transition-all duration-500 bg-white absolute inset-0 p-5">
+          <div className="h-full min-h-full z-50 translate-x-[-0%] ease-in-out transition-all duration-500 bg-white absolute inset-0 p-5">
             <div className="flex items-center justify-between">
               <a
                 href="/"
