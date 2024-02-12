@@ -25,7 +25,7 @@ function Agence() {
         </p>
 
         <a
-          href="#"
+          href="/"
           className="mt-10 py-1.5 px-4 bg-[#5FC4E6] w-fit flex items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-500/40 hover:bg-orange-500"
         >
           <span className="text-white text-sm">Je veux en savoir plus</span>
