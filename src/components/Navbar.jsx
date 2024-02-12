@@ -5,15 +5,21 @@ function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
     if (mobileMenu) {
       document.body.classList.add('no-scroll');
+      document.body.style.overflow = 'hidden';
     } else {
       document.body.classList.remove('no-scroll');
+      document.body.style.overflow = originalStyle;
     }
-  
+
     // Nettoyage : s'exécute lorsque le composant est démonté ou avant que l'effet se réexécute
-    return () => document.body.classList.remove('no-scroll');
-  }, [mobileMenu]); // Les crochets indiquent que l'effet dépend de l'état de `mobileMenu`
+    return () => {
+      document.body.classList.remove('no-scroll');
+      document.body.style.overflow = originalStyle;
+    };
+  }, [mobileMenu]);
 
   return (
     <div className="w-full bg-black py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
