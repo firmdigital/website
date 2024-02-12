@@ -37,7 +37,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/dev.png"
                 alt="DEVELOPPEMENT D'APPLICATION"
@@ -53,7 +53,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/ux-ui.png"
                 alt="Ux UI design"
@@ -72,7 +72,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/formations.png"
                 alt=""
@@ -90,7 +90,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/design.png"
                 alt=""
