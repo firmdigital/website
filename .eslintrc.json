@@ -18,16 +18,16 @@
         "react"
     ],
     "rules": {
-        "no-useless-escape": "warn",
-        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "quotes": [
-            1,
-            "single"
-        ],
-        "jsx-quotes": "warn",
-        "no-console": "warn",
-        "no-mixed-spaces-and-tabs": 0,
-        "no-warning-comments": 0
+        "no-useless-escape": "warn"
+        // "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+        // "@typescript-eslint/no-non-null-assertion": "off",
+        // "quotes": [
+        //     1,
+        //     "single"
+        // ],
+        // "jsx-quotes": "warn",
+        // "no-console": "warn",
+        // "no-mixed-spaces-and-tabs": 0,
+        // "no-warning-comments": 0
     }
 }
