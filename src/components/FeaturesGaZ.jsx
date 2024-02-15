@@ -3,9 +3,7 @@ import Layout from "./Lajout";
 const features = [
   { id: 1, name: "Détection des fuites de gaz butane" },
   { id: 2, name: "Alerte sonore et led rouge" },
-  /* eslint no-useless-escape: "warn" */
   { id: 3, name: "Fermeture automatique par l\'electrovane"},
-  /* eslint no-useless-escape: "warn" */
   { id: 4, name: "Envoi d\'sms suivie d\'un appel" },
 ];
 
