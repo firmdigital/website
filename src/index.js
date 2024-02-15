@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './components/Lajout';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import SoSecuriGaz from './components/SoSecuriGaz';
+import FeaturesGaZ from './components/FeaturesGaZ';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,8 @@ root.render(
     <Layout>
       <App/>
     </Layout>
+    {/* <SoSecuriGaz /> */}
+    {/* <FeaturesGaZ /> */}
   </React.StrictMode>
 );
 

@@ -7,24 +7,24 @@ function Navbar() {
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
     if (mobileMenu) {
-      document.body.classList.add('no-scroll');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add("no-scroll");
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove("no-scroll");
       document.body.style.overflow = originalStyle;
     }
 
     // Nettoyage : s'exécute lorsque le composant est démonté ou avant que l'effet se réexécute
     return () => {
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove("no-scroll");
       document.body.style.overflow = originalStyle;
     };
   }, [mobileMenu]);
 
   return (
-    <div className="w-full bg-black py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
+    <div className="w-full bg-transparent -z-50 py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
       {/* Desktop Menu */}
-      <div className="md:flex hidden w-full items-center justify-between gap-8">
+      <div className="lg:flex hidden w-full items-center justify-between gap-8">
         {/* Logo */}
         <a
           href="/"
@@ -38,13 +38,13 @@ function Navbar() {
           />
         </a>
         {/* Nav links */}
-        <div className="flex items-center gap-10">
+        <div className="flex items-center lg:gap-16 gap-10">
           {navlinks.map((nav) => {
             return (
               <div key={nav.id}>
                 <a
                   href={nav.href}
-                  className="text-white cursor-pointer font-semibold text-base hover:bg-[#5FC4E6] hover:p-2 hover:rounded hover:text-gray-700 hover:scale-95 transition-all duration-300"
+                  className="text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300"
                 >
                   {nav.name}
                 </a>
@@ -52,11 +52,15 @@ function Navbar() {
             );
           })}
         </div>
+
+        <button className="bg-[#5FC4E6] text-semibold hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20">
+          Nous Contacter
+        </button>
       </div>
       {/* End Desktop Menu */}
 
       {/* Mobile menu */}
-      <div className="md:hidden">
+      <div className="lg:hidden z-[999]">
         <div className="flex items-center gap-6 justify-between">
           {/* Logo */}
           <a
@@ -77,7 +81,7 @@ function Navbar() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8 text-white cursor-pointer transition-all duration-500 hover:scale-95"
+            className="w-8 h-8 text-[#5FC4E6] font-extrabold cursor-pointer transition-all duration-500 hover:scale-95"
             onClick={() => {
               setMobileMenu(!mobileMenu);
             }}
@@ -121,8 +125,7 @@ function Navbar() {
                 />
               </svg>
             </div>
-            <hr className="w-full border-[#5FC4E6]/20 my-1" />
-            <div className="flex flex-col gap-10 py-5">
+            <div className="flex flex-col gap-10 pt-8 pb-2">
               {navlinks.map((nav) => {
                 return (
                   <div key={nav.id}>
@@ -136,6 +139,10 @@ function Navbar() {
                 );
               })}
             </div>
+            <hr className="border-[#5FC4E6]/40" />
+            <button className="bg-[#5FC4E6] text-semibold my-5 hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20">
+              Nous Contacter
+            </button>
           </div>
         )}
       </div>
