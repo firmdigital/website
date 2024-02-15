@@ -17,8 +17,8 @@ root.render(
     <Layout>
       <App/>
     </Layout>
-    {/* <SoSecuriGaz /> */}
-    {/* <FeaturesGaZ /> */}
+    <SoSecuriGaz />
+    <FeaturesGaZ />
   </React.StrictMode>
 );
 
