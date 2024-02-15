@@ -3,8 +3,8 @@ import Layout from "./Lajout";
 const features = [
   { id: 1, name: "Détection des fuites de gaz butane" },
   { id: 2, name: "Alerte sonore et led rouge" },
-  { id: 3, name: "Fermeture automatique par l\'electrovane"},
-  { id: 4, name: "Envoi d\'sms suivie d\'un appel" },
+  { id: 3, name: "Fermeture automatique par l&apos;electrovane"},
+  { id: 4, name: "Envoi d&apos;sms suivie d&apos;un appel" },
 ];
 
 export default function FeatureGaZ() {
@@ -34,11 +34,11 @@ export default function FeatureGaZ() {
               Fonctionnalités principales de SO SECURIGAZ
             </h2>
             <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              L'utilisation du gaz présente&nbsp;un réel risque
+              L&apos;utilisation du gaz présente&nbsp;un réel risque
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Dispositif qui vise à préserver et à sauver des vies humaines
-              contre les accidents domestiques dûs au cas d'oubli ou de fuite de
+              contre les accidents domestiques dûs au cas d&apos;oubli ou de fuite de
               gaz.
             </p>
           </div>

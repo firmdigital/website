@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -27,7 +25,7 @@ function Services() {
           <div className="w-[55%] bg-[#5FC4E6]/20 rounded-lg flex items-start p-8 h-52 gap-6">
             <div className="flex gap-2 flex-col">
               <h1 className="font-semibold leading-5 text-xl">
-                DEVELOPPEMENT D'APPLICATION
+                DEVELOPPEMENT D&apos;APPLICATION
               </h1>
               <span className="text-base font-thin">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -109,7 +107,7 @@ function Services() {
              
               <div className="flex gap-2 flex-col">
                 <h1 className="font-semibold leading-5 text-xl uppercase">
-                  DEVELOPPEMENT D'APPLICATION
+                  DEVELOPPEMENT D&apos;APPLICATION
                 </h1>
                 <span className="text-base font-light">
                   Lorem Ipsum is simply dummy text of the printing and typesetting

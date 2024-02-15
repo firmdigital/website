@@ -1,5 +1,3 @@
-import React from "react";
-
 const tech = [
   { id: 1, name: "Java Script", logo: "../assets/script-java.png" },
   { id: 2, name: "Python", logo: "../assets/python.png" },

@@ -1,5 +1,3 @@
-import React from "react";
-
 function Hero() {
   return (
     <>
@@ -85,7 +83,7 @@ function Hero() {
           <div className="flex md:flex-row flex-col items-center gap-8 w-full">
             <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
               <h4 className="text-[#5FC4E6] text-sm truncate">
-                J'ai un <br />{" "}
+                J&apos;ai un <br />{" "}
                 <span className="font-semibold">Projet Digital</span>
               </h4>
               <svg
@@ -106,7 +104,7 @@ function Hero() {
 
             <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
               <h4 className="text-[#5FC4E6] text-sm truncate">
-                J'ai besoin d'une <br />{" "}
+                J&apos;ai besoin d&apos;une <br />{" "}
                 <span className="font-semibold">Expertise UX/UI</span>
               </h4>
               <svg
@@ -127,7 +125,7 @@ function Hero() {
 
             <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
               <h4 className="text-[#5FC4E6] text-sm truncate">
-                J'ai besoin d'une <br />{" "}
+                J&apos;ai besoin d&apos;une <br />{" "}
                 <span className="font-semibold">Expertise Technologique</span>
               </h4>
               <svg

@@ -1,5 +1,3 @@
-import React from "react";
-
 function SoSecuriGaz() {
   return (
     <div className="w-full py-10 ">

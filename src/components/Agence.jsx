@@ -1,5 +1,3 @@
-import React from "react";
-
 function Agence() {
   return (
     <div className="w-full flex md:flex-row flex-col md:justify-between md:items-center md:gap-10 gap-5">
@@ -15,11 +13,11 @@ function Agence() {
         </h1>
         <p className="md:text-lg text-base font-light text-gray-500 mt-3 text-justify">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. Lorem Ipsum is simply dummy
           text of the printing and typesetting industry. Lorem Ipsum has been
-          the industry's standard dummy text ever since the 1500s, when an
+          the industry&apos;s standard dummy text ever since the 1500s, when an
           unknown printer took a galley of type and scrambled it to make a type
           specimen book.
         </p>
