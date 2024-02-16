@@ -1,12 +1,7 @@
-import React from "react";
-// import Swiper core and required modules
-import { Pagination, A11y } from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
 
 function Services() {
   return (
@@ -27,17 +22,17 @@ function Services() {
       {/* Service card */}
       <div className="w-full md:flex md:flex-col hidden gap-3 py-10">
         <div className="flex items-center w-full gap-3">
-          <div className="w-[55%] bg-[#5FC4E6]/30 rounded-lg flex items-start p-8 h-52 gap-6">
+          <div className="w-[55%] bg-[#5FC4E6]/20 rounded-lg flex items-start p-8 h-52 gap-6">
             <div className="flex gap-2 flex-col">
               <h1 className="font-semibold leading-5 text-xl">
-                DEVELOPPEMENT D'APPLICATION
+                DEVELOPPEMENT D&apos;APPLICATION
               </h1>
               <span className="text-base font-thin">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-gradient-to-b from-white  hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/dev.png"
                 alt="DEVELOPPEMENT D'APPLICATION"
@@ -45,7 +40,7 @@ function Services() {
               />
             </div>
           </div>
-          <div className="w-[45%] bg-[#5FC4E6]/30 rounded-lg flex items-start p-8 h-52 gap-6">
+          <div className="w-[45%] bg-[#5FC4E6]/20 rounded-lg flex items-start p-8 h-52 gap-6">
             <div className="flex gap-2 flex-col">
               <h1 className="font-semibold leading-5 text-xl">UX UI DESIGN</h1>
               <span className="text-base font-thin">
@@ -53,7 +48,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/ux-ui.png"
                 alt="Ux UI design"
@@ -64,7 +59,7 @@ function Services() {
         </div>
 
         <div className="flex items-center w-full gap-3">
-          <div className="w-[45%] bg-[#5FC4E6]/30 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
+          <div className="w-[45%] bg-[#5FC4E6]/20 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
             <div className="flex gap-2 flex-col">
               <h1 className="font-semibold leading-5 text-xl">FORMATIONS</h1>
               <span className="text-base font-thin">
@@ -72,7 +67,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/formations.png"
                 alt=""
@@ -80,7 +75,7 @@ function Services() {
               />
             </div>
           </div>
-          <div className="w-[55%] bg-[#5FC4E6]/30 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
+          <div className="w-[55%] bg-[#5FC4E6]/20 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
             <div className="flex gap-2 flex-col">
               <h1 className="font-semibold leading-5 text-xl">
                 DESIGN 3D & PROTOTYPAGE
@@ -90,7 +85,7 @@ function Services() {
                 industry.{" "}
               </span>
             </div>
-            <div className="px-5 bg-[#5FC4E6] hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
+            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
               <img
                 src="../assets/design.png"
                 alt=""
@@ -104,93 +99,98 @@ function Services() {
       {/* Mobile Servie */}
       <div className="w-full flex md:hidden py-10 px-2">
         <Swiper
-          modules={[Pagination, A11y]}
-          className="mySwiper"
           spaceBetween={10}
           slidesPerView={1.1}
-          pagination={{ clickable: false, dynamicBullets: true }}
         >
           <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/30 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-              <div className="w-full h-[50%] bg-[#5FC4E6] rounded-md items-center justify-center flex">
+            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+             
+              <div className="flex gap-2 flex-col">
+                <h1 className="font-semibold leading-5 text-xl uppercase">
+                  DEVELOPPEMENT D&apos;APPLICATION
+                </h1>
+                <span className="text-base font-light">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.{" "}
+                </span>
+              </div>
+              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
                 <img
                   src="../assets/dev.png"
                   alt="DEVELOPPEMENT D'APPLICATION"
                   className="object-cover aspect-square"
                 />
               </div>
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl">
-                  DEVELOPPEMENT D'APPLICATION
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
-              </div>
 
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/30 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-              <div className="w-full h-[50%] bg-[#5FC4E6] rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/ux-ui.png"
-                  alt="UX UI DESIGN"
-                  className="object-cover aspect-square"
-                />
-              </div>
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl">
-                  UX UI DESIGN
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
-              </div>
             </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/30 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-              <div className="w-full h-[50%] bg-[#5FC4E6] rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/formations.png"
-                  alt="FORMATIONS"
-                  className="object-cover aspect-square"
-                />
-              </div>
+            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+             
               <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl">
-                  FORMATIONS
+                <h1 className="font-semibold leading-5 text-xl uppercase">
+                  UX UI Design
                 </h1>
                 <span className="text-base font-light">
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry.{" "}
                 </span>
               </div>
+              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
+                <img
+                  src="../assets/dev.png"
+                  alt="DEVELOPPEMENT D'APPLICATION"
+                  className="object-cover aspect-square"
+                />
+              </div>
+
             </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/30 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-              <div className="w-full h-[50%] bg-[#5FC4E6] rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/design.png"
-                  alt="DESIGN 3D & PROTOTYPAGE"
-                  className="object-cover aspect-square"
-                />
-              </div>
+            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+             
               <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl">
-                  DESIGN 3D & PROTOTYPAGE
+                <h1 className="font-semibold leading-5 text-xl uppercase">
+                  Formations
                 </h1>
                 <span className="text-base font-light">
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry.{" "}
                 </span>
               </div>
+              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
+                <img
+                  src="../assets/dev.png"
+                  alt="DEVELOPPEMENT D'APPLICATION"
+                  className="object-cover aspect-square"
+                />
+              </div>
+
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+             
+              <div className="flex gap-2 flex-col">
+                <h1 className="font-semibold leading-5 text-xl uppercase">
+                  Design 3D
+                </h1>
+                <span className="text-base font-light">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.{" "}
+                </span>
+              </div>
+              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
+                <img
+                  src="../assets/dev.png"
+                  alt="DEVELOPPEMENT D'APPLICATION"
+                  className="object-cover aspect-square"
+                />
+              </div>
+
             </div>
           </SwiperSlide>
         </Swiper>

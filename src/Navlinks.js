@@ -19,9 +19,4 @@ export const navlinks = [
         name: 'Blocs',
         href: ''
     },
-    {
-        id: 5,
-        name: 'Contacts',
-        href: ''
-    }
 ]
