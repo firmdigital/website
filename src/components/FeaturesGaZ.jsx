@@ -3,18 +3,18 @@ import Layout from "./Lajout";
 const features = [
   { id: 1, name: "Détection des fuites de gaz butane" },
   { id: 2, name: "Alerte sonore et led rouge" },
-  { id: 3, name: "Fermeture automatique par l&apos;electrovane"},
-  { id: 4, name: "Envoi d&apos;sms suivie d&apos;un appel" },
+  { id: 3, name: "Fermeture automatique par l'electrovane" },
+  { id: 4, name: "Envoi d'sms suivie d'un appel" },
 ];
 
 export default function FeatureGaZ() {
   return (
     <Layout>
-      <div className="relative isolate overflow-hidden rounded-2xl bg-gray-900 py-10 md:mt-20 mt-10">
+      <div className="relative isolate overflow-hidden rounded-2xl bg-gray-800 py-10">
         <img
           src="https://thecrmteam.com/wp-content/uploads/2021/10/blog-digital-transformation.jpg"
           alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-5"
         />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div
@@ -31,24 +31,24 @@ export default function FeatureGaZ() {
           </div>
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
             <h2 className="text-base font-semibold leading-8 text-[#5FC4E6]">
-              Fonctionnalités principales de SO SECURIGAZ
+              Pourquoi choisir de SO SECURIGAZ ?
             </h2>
             <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              L&apos;utilisation du gaz présente&nbsp;un réel risque
+              L&apos;utilisation du gaz présente&nbsp;un réel risque.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Dispositif qui vise à préserver et à sauver des vies humaines
-              contre les accidents domestiques dûs au cas d&apos;oubli ou de fuite de
-              gaz.
+              Quatres (4) raisons pour choisir SO SECURIGAZ :
             </p>
           </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          <dl className="mx-auto grid mt-10 max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             {features.map((f) => (
               <div
                 key={f.id}
-                className="flex flex-col gap-y-3 border-l border-white/10 pl-6"
+                className="flex flex-col gap-y-3 border-l border-[#5FC4E6]/30 pl-6"
               >
-                <dt className="order-first text-lg font-semibold tracking-tight">{f.name}</dt>
+                <dt className="order-first text-lg font-semibold tracking-tight">
+                  {f.name}
+                </dt>
               </div>
             ))}
           </dl>
