@@ -12,9 +12,9 @@ export default function FeatureGaZ() {
     <Layout>
       <div className="relative isolate overflow-hidden rounded-2xl bg-gray-900 py-10 md:mt-20 mt-10">
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80&blend=111827&blend-mode=multiply&sat=-100&exp=15"
+          src="https://thecrmteam.com/wp-content/uploads/2021/10/blog-digital-transformation.jpg"
           alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
         />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div

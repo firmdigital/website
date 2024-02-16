@@ -18,10 +18,7 @@
     "rules": {
         "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "quotes": [
-            2,
-            "double"
-        ],
+        "quotes": "off",
         "jsx-quotes": "warn",
         "no-console": "warn",
         "no-mixed-spaces-and-tabs": 0,
