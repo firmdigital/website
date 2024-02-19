@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    env:
+    env: 
       CI: false
 
     runs-on: ubuntu-latest
