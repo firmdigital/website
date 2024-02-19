@@ -35,12 +35,12 @@ export default function NewsLetter() {
                 type="email"
                 autoComplete="email"
                 required
-                className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
+                className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                 placeholder="Votre email"
               />
               <button
                 type="submit"
-                className="flex-none rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="flex-none rounded-md bg-[#5FC4E6] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
               >
                 Envoyer
               </button>
@@ -49,7 +49,7 @@ export default function NewsLetter() {
               Nous nous soucions de vos données. Lire notre{" "}
               <a
                 href="#"
-                className="font-semibold text-blue-400 hover:text-blue-500"
+                className="font-semibold text-[#5FC4E6] hover:text-orange-500"
               >
                 politique de confidentialité
               </a>
