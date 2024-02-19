@@ -1,8 +1,52 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
+const services = [
+  {
+    id: 1,
+    name: "DEVELOPPEMENT D'APPLICATION",
+    desription:
+      "Plongez dans l'innovation numérique avec nos développeurs experts, créant des applications sur mesure qui transforment vos idées en réalité interactive.",
+    image: "../assets/services/appdev.png",
+  },
+  {
+    id: 2,
+    name: "UX UI DESIGN",
+    desription:
+      "Redéfinissez l'expérience utilisateur à travers des interfaces élégantes et des designs intuitifs, offrant une immersion visuelle qui captive et engage.",
+    image: "../assets/services/uxui.png",
+  },
+  {
+    id: 3,
+    name: "Community Management",
+    desription:
+      "Cultivez des connexions significatives avec votre audience grâce à notre gestion de communauté experte, stimulant l'engagement et renforçant la présence en ligne de votre marque.",
+    image: "../assets/services/cm.png",
+  },
+  {
+    id: 4,
+    name: "Électronique et Systèmes Embarqués",
+    desription:
+      " Explorez l'avant-garde de la technologie avec notre expertise en électronique et systèmes embarqués, offrant des solutions innovantes pour propulser votre entreprise vers l'avenir.",
+    image: "../assets/services/electronique.png",
+  },
+  {
+    id: 5,
+    name: "Design 3D",
+    desription:
+      " Explorez un monde tridimensionnel captivant, où notre équipe de designers donne vie à vos concepts avec une profondeur visuelle et une créativité époustouflantes.",
+    image: "../assets/services/3d.png",
+  },
+  {
+    id: 6,
+    name: "DESIGN GRAPHIQUE",
+    desription:
+      "Fusionnez esthétique et communication visuelle de manière exceptionnelle, grâce à notre expertise en design graphique qui transforme votre identité en une œuvre d&apos;art.",
+    image: "../assets/services/design.png",
+  },
+];
 function Services() {
   return (
     <div className="w-full">
@@ -20,181 +64,67 @@ function Services() {
       </div>
 
       {/* Service card */}
-      <div className="w-full md:flex md:flex-col hidden gap-3 py-10">
-        <div className="flex items-center w-full gap-3">
-          <div className="w-[55%] bg-[#5FC4E6]/20 rounded-lg flex items-start p-8 h-52 gap-6">
-            <div className="flex gap-2 flex-col">
-              <h1 className="font-semibold leading-5 text-xl">
-                DEVELOPPEMENT D&apos;APPLICATION
-              </h1>
-              <span className="text-base font-thin">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </span>
+      <div className="w-full lg:grid hidden gap-3 py-10 min-h-[200px]">
+        <div className="grid grid-cols-2 w-full gap-3">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="w-full bg-[#5FC4E6]/5 shadow shadow-slate-400/10 rounded-lg flex items-start p-8 min-h-[200px] gap-6 overflow-hidden"
+            >
+              <div className="flex w-3/5 gap-2 flex-col">
+                <h1 className="font-semibold leading-5 text-lg uppercase">
+                  {service.name}
+                </h1>
+                <span className="text-sm text-gray-400 overflow-hidden text-ellipsis">
+                  {service.desription}
+                </span>
+              </div>
+              <div className="px-5 w-2/5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="object-cover lg:w-[70%] md:w-full aspect-square object-fit-cover"
+                />
+              </div>
             </div>
-            <div className="px-5 bg-gradient-to-b from-white  hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
-              <img
-                src="../assets/dev.png"
-                alt="DEVELOPPEMENT D'APPLICATION"
-                className="object-cover lg:w-[70%] md:w-full aspect-square"
-              />
-            </div>
-          </div>
-          <div className="w-[45%] bg-[#5FC4E6]/20 rounded-lg flex items-start p-8 h-52 gap-6">
-            <div className="flex gap-2 flex-col">
-              <h1 className="font-semibold leading-5 text-xl">UX UI DESIGN</h1>
-              <span className="text-base font-thin">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </span>
-            </div>
-            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
-              <img
-                src="../assets/ux-ui.png"
-                alt="Ux UI design"
-                className="object-cover lg:w-[70%] md:w-full aspect-square"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center w-full gap-3">
-          <div className="w-[45%] bg-[#5FC4E6]/20 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
-            <div className="flex gap-2 flex-col">
-              <h1 className="font-semibold leading-5 text-xl">FORMATIONS</h1>
-              <span className="text-base font-thin">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </span>
-            </div>
-            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
-              <img
-                src="../assets/formations.png"
-                alt=""
-                className="object-cover lg:w-[70%] md:w-full"
-              />
-            </div>
-          </div>
-          <div className="w-[55%] bg-[#5FC4E6]/20 rounded-lg flex flex-row-reverse items-start p-8 h-52 gap-6">
-            <div className="flex gap-2 flex-col">
-              <h1 className="font-semibold leading-5 text-xl">
-                DESIGN 3D & PROTOTYPAGE
-              </h1>
-              <span className="text-base font-thin">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </span>
-            </div>
-            <div className="px-5 bg-gradient-to-b from-white hover:shadow-lg hover:shadow-slate-500/10 hover:scale-105 transition-all duration-300 rounded-md h-full items-center justify-center flex">
-              <img
-                src="../assets/design.png"
-                alt=""
-                className="object-cover lg:w-[70%] md:w-full"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* Mobile Servie */}
-      <div className="w-full flex md:hidden py-10 px-2">
+      <div className="w-full flex lg:hidden py-10 px-2">
         <Swiper
           spaceBetween={10}
           slidesPerView={1.1}
+          breakpoints={{
+            // when window width is >= 768px
+            500: {
+              slidesPerView: 2.1,
+            },
+          }}
         >
-          <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-             
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl uppercase">
-                  DEVELOPPEMENT D&apos;APPLICATION
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
+          {services.map((service) => (
+            <SwiperSlide key={service.id}>
+              <div className="w-full bg-[#5FC4E6]/5 shadow-md shadow-slate-500/10 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+                <div className="flex gap-2 flex-col">
+                  <h1 className="font-semibold leading-5 text-lg uppercase">
+                    {service.name}
+                  </h1>
+                  <span className="text-sm text-gray-400 font-light">
+                    {service.desription}
+                  </span>
+                </div>
+                <div className="w-full bg-gradient-to-b from-white rounded-md items-center justify-center flex">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="object-cover aspect-square w-[70%]"
+                  />
+                </div>
               </div>
-              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/dev.png"
-                  alt="DEVELOPPEMENT D'APPLICATION"
-                  className="object-cover aspect-square"
-                />
-              </div>
-
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-             
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl uppercase">
-                  UX UI Design
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
-              </div>
-              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/dev.png"
-                  alt="DEVELOPPEMENT D'APPLICATION"
-                  className="object-cover aspect-square"
-                />
-              </div>
-
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-             
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl uppercase">
-                  Formations
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
-              </div>
-              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/dev.png"
-                  alt="DEVELOPPEMENT D'APPLICATION"
-                  className="object-cover aspect-square"
-                />
-              </div>
-
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-full bg-[#5FC4E6]/20 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
-             
-              <div className="flex gap-2 flex-col">
-                <h1 className="font-semibold leading-5 text-xl uppercase">
-                  Design 3D
-                </h1>
-                <span className="text-base font-light">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry.{" "}
-                </span>
-              </div>
-              <div className="w-full h-[50%] bg-gradient-to-b from-white rounded-md items-center justify-center flex">
-                <img
-                  src="../assets/dev.png"
-                  alt="DEVELOPPEMENT D'APPLICATION"
-                  className="object-cover aspect-square"
-                />
-              </div>
-
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
-
       </div>
     </div>
   );

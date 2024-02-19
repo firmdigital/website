@@ -1,10 +1,26 @@
 import Layout from "./Lajout";
 
 const features = [
-  { id: 1, name: "Détection des fuites de gaz butane" },
-  { id: 2, name: "Alerte sonore et led rouge" },
-  { id: 3, name: "Fermeture automatique par l'electrovane" },
-  { id: 4, name: "Envoi d'sms suivie d'un appel" },
+  {
+    id: 1,
+    name: "Détection des fuites de gaz butane",
+    icone: "../assets/gas-features/fuite-de-gaz.png",
+  },
+  {
+    id: 2,
+    name: "Alerte sonore et visuelle en cas de fuite",
+    icone: "../assets/gas-features/packard-bell.png",
+  },
+  {
+    id: 3,
+    name: "Fermeture automatique de la vanne",
+    icone: "../assets/gas-features/vanne-a-guillotine.png",
+  },
+  {
+    id: 4,
+    name: "Envoi d'sms suivie d'un appel",
+    icone: "../assets/gas-features/conversation.png",
+  },
 ];
 
 export default function FeatureGaZ() {
@@ -31,22 +47,22 @@ export default function FeatureGaZ() {
           </div>
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
             <h2 className="text-base font-semibold leading-8 text-[#5FC4E6]">
-              Pourquoi choisir de SO SECURIGAZ ?
+              Pourquoi choisir SO SECURIGAZ ?
             </h2>
             <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
               L&apos;utilisation du gaz présente&nbsp;un réel risque.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Quatres (4) raisons pour choisir SO SECURIGAZ :
+              Quatre (04) raisons pour choisir SO SECURIGAZ :
             </p>
           </div>
-          <dl className="mx-auto grid mt-10 max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          <dl className="mx-auto grid mt-10 max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none">
             {features.map((f) => (
-              <div
-                key={f.id}
-                className="flex flex-col gap-y-3 border-l border-[#5FC4E6]/30 pl-6"
-              >
-                <dt className="order-first text-lg font-semibold tracking-tight">
+              <div key={f.id} className="flex flex-col gap-y-3">
+                <dt className="order-first text-lg flex items-center gap-4 font-semibold tracking-tight">
+                  <div className="bg-[#5FC4E6]/40 rounded-lg p-2 flex items-center justify-center">
+                    <img src={f.icone} alt={f.name} className="w-8" />
+                  </div>
                   {f.name}
                 </dt>
               </div>

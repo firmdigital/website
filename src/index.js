@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SoSecuriGaz from './components/SoSecuriGaz';
 import FeaturesGaZ from './components/FeaturesGaZ';
+import NewsLetter from './components/NewsLetter';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +21,8 @@ root.render(
     </Layout>
     <SoSecuriGaz />
     <FeaturesGaZ />
+    <NewsLetter />
+    <Footer />
   </React.StrictMode>
 );
 

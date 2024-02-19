@@ -17,7 +17,10 @@ export default function SoSecuriGaz() {
         <div className="py-24 sm:py-32 lg:pb-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
+                NOS PROJETS
+              </span>
+              <h1 className="text-4xl mt-5 font-bold tracking-tight text-gray-900 sm:text-6xl">
                 SO SECURIGAZ
               </h1>
               <p className="mt-6 text-base leading-8 text-gray-600">
@@ -26,17 +29,13 @@ export default function SoSecuriGaz() {
                 d&apos;oubli ou de fuite de gaz.
               </p>
               <div className="mt-10 flex sm:flex-row flex-col  items-center justify-center gap-4">
-                <div
-                  className="rounded-md sm:w-fit w-full justify-center cursor-pointer flex items-center gap-1 bg-[#5FC4E6] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5FC4E6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5FC4E6]"
-                >
-                  <img src="../assets/play-store.png" alt="" className="w-5"/>
-                  <span>Play Store</span> 
+                <div className="rounded-md sm:w-fit w-full justify-center cursor-pointer flex items-center gap-1 bg-[#5FC4E6] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5FC4E6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5FC4E6]">
+                  <img src="../assets/play-store.png" alt="" className="w-5" />
+                  <span>Play Store</span>
                 </div>
-                <div
-                  className="rounded-md sm:w-fit w-full justify-center cursor-pointer flex items-center gap-1 bg-white ring-1 ring-black px-3.5 py-2 text-sm font-semibold text-black shadow-sm"
-                >
-                  <img src="../assets/app-store.png" alt="" className="w-5"/>
-                  <span>App Store</span> 
+                <div className="rounded-md sm:w-fit w-full justify-center cursor-pointer flex items-center gap-1 bg-white ring-1 ring-black px-3.5 py-2 text-sm font-semibold text-black shadow-sm">
+                  <img src="../assets/app-store.png" alt="" className="w-5" />
+                  <span>App Store</span>
                 </div>
               </div>
             </div>

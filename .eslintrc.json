@@ -22,9 +22,10 @@
         "jsx-quotes": "warn",
         "no-console": "warn",
         "no-mixed-spaces-and-tabs": 0,
+        "no-unused-vars":"off",
         "no-warning-comments": 0,
         "react/react-in-jsx-scope": "off",
-        "no-useless-escape":"warn",
+        "no-useless-escape":"off",
         "react/prop-types": "off"
     }
 }

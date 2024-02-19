@@ -1,8 +1,8 @@
 const tech = [
-  { id: 1, name: "Java Script", logo: "../assets/script-java.png" },
-  { id: 2, name: "Python", logo: "../assets/python.png" },
-  { id: 3, name: "Php", logo: "../assets/php.png" },
-  { id: 4, name: "Java", logo: "../assets/java.png" },
+  { id: 1, name: "Java Script", logo: "../assets/tech/script-java.png" },
+  { id: 2, name: "Python", logo: "../assets/tech/python.png" },
+  { id: 3, name: "Php", logo: "../assets/tech/php.png" },
+  { id: 4, name: "Java", logo: "../assets/tech/java.png" },
 ];
 
 function TechStack() {
