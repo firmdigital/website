@@ -12,7 +12,7 @@ body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    
+
     ::selection {
         color: white;
         background-color: rgb(251, 120, 13);
@@ -24,3 +24,14 @@ body {
     }
 
 }
+/* Ajoutez cette classe dans votre fichier CSS */
+.degrade-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff0099, #493240); /* Exemple de dégradé */
+    pointer-events: none; /* Permet les interactions avec l'élément sous-jacent */
+  }
