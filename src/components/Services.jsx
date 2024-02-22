@@ -69,7 +69,7 @@ function Services() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="w-full bg-[#5FC4E6]/5 shadow shadow-slate-400/10 rounded-lg flex items-start p-8 min-h-[200px] gap-6 overflow-hidden"
+              className="w-full bg-[#5FC4E6]/10 shadow-lg shadow-slate-400/10 rounded-lg flex items-start p-8 min-h-[200px] gap-6 overflow-hidden"
             >
               <div className="flex w-3/5 gap-2 flex-col">
                 <h1 className="font-semibold leading-5 text-lg uppercase">
@@ -105,7 +105,7 @@ function Services() {
         >
           {services.map((service) => (
             <SwiperSlide key={service.id}>
-              <div className="w-full bg-[#5FC4E6]/5 shadow-md shadow-slate-500/10 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
+              <div className="w-full bg-[#5FC4E6]/10 shadow-lg shadow-slate-500/10 rounded-lg flex flex-col items-start p-4 h-96 gap-6">
                 <div className="flex gap-2 flex-col">
                   <h1 className="font-semibold leading-5 text-lg uppercase">
                     {service.name}
