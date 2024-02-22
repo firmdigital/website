@@ -27,8 +27,7 @@ const posts = [
     id: 2,
     fullname: "Mohamed Lamine KONE",
     position: "Développeur Fullstack",
-    imageUrl:
-      "https://lh3.googleusercontent.com/pw/ABLVV86KmS9soStGzzKjRlOKU5p4aqml6_f-RsnTFA_sC6hNs6F-_6rUWZv9mC4Vlph023HbfFfSnDt5Yd7fHNWXWUaBh--B2p4ISnyg_mBf2tHfJ42-XwVaWnZr_5UlcG017uCm5ulxr1eXIPBEa8k3YcCNDwBfNNI8cEKAkU4Pzt4b3U-qhvKU_KmQFzHawv_3OCmWReEZJa5BLRf5mwwDTa73WqutggSMwH-dGtZlWlmscSNKWfAj_uYLpUWWNwr5LapcZ5fzDXXNh_WgBWrjzkMRrkg_wmkKodMdH09rXEGNoAzDJ7X3xl7IzAAqelua4OE6Ohk00LUa5RHt5qey3Ke4oE--rmgjCh3MBZ_-hsD-kAj_JKDji89RDPzDFwxvNibRHj_XL2KXKzSeQjgeJaPo1IErCyBnc3Ib6qAH2fhlz-auFg16djfvMk8d2DaBCeSYeuahP5RY6hsZgOu-9lBcc2YzBE8yrfGrdsc71BTs8lM2KSIF63D-cUakckJjdGn0WZW6CpHBwEKcf9Aez5XAp1JS16RIDfuS0Ol8KqD0g75qz2qNHWUtChKa24keAEbGgndOw6LoK5re5s1tb0tvB24E5n3etmRvsXUKGaCJVB9VGZ-0WjjIfPB16A4XspYzHGRXkvDfxA_b0aEhEgAjnjzVJxXFyhR9pcRjA3247A9ZIw_WRK_WnmyEmZHhe3SQ68RXDW_uVYojR6QB31nQFSRu2US_u7XRx80uTe2OJ7gtMpAZM2SzVs9Bxpclm9pBelMTM9uU1l8m3spy6iQ9y-G8RGtphhL4i6WqoorriXHeT65oeZ9qqg6ZLnUo2tKKFs6jABEo-XVWKlOl7oCtQoA0bcTbTTDCJe4rWlozMq7a2_aYbBlAdpy0lqfJwK3aCu0SGe53D-wFXUveS5WhCQzB2FlboAzCnFExi125skBossiKoAHwH9XGMhHplk8r37ycPiH96Dx7JD_30sZJjZsEQsU-5U3K6EuOBR-iY_l2Sprm8OzuTU3lrdGYEHwIOJkZRr2WC7lhF2aq8UfENBrPVmCBpd6xS10=w958-h1280-s-no-gm?authuser=0",
+    imageUrl: "./assets/team/Malla.jpg",
     social: [
       {
         name: "linkedin",
