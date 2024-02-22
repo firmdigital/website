@@ -10,6 +10,8 @@ import SoSecuriGaz from './components/SoSecuriGaz';
 import FeaturesGaZ from './components/FeaturesGaZ';
 import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Team from './components/Team';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +24,8 @@ root.render(
     <SoSecuriGaz />
     <FeaturesGaZ />
     <NewsLetter />
+    {/* <Contact /> */}
+    <Team />
     <Footer />
   </React.StrictMode>
 );
