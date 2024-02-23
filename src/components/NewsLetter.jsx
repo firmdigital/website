@@ -1,61 +1,70 @@
 import Layout from "./Lajout";
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 export default function NewsLetter() {
   return (
     <Layout>
-      <div className="bg-white py-16 sm:py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-          <div className="max-w-xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:col-span-7">
-            <h2 className="inline sm:block lg:inline xl:block">
-              Soyez toujours informé de nos activités et nos projets
-            </h2>{" "}
-          </div>
-          <form className="w-full max-w-md lg:col-span-5 lg:pt-2">
-            <div className="flex gap-x-4">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
-                placeholder="Votre email"
+      <div className="bg-white mb-20">
+        <div className="mx-auto">
+          <div className="relative isolate flex flex-col gap-10 overflow-hidden bg-gray-900 px-10 py-24 shadow-2xl sm:rounded-3xl xl:flex-row xl:items-center">
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">
+              Get notified when we’re launching.
+            </h2>
+            <form className="w-full max-w-md">
+              <div className="flex gap-x-4">
+                <label htmlFor="email-address" className="sr-only">
+                  Email address
+                </label>
+                <input
+                  id="email-address"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                  placeholder="Enter your email"
+                />
+                <button
+                  type="submit"
+                  className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  Notify me
+                </button>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-gray-300">
+                We care about your data. Read our{" "}
+                <a href="#" className="font-semibold text-white">
+                  privacy&nbsp;policy
+                </a>
+                .
+              </p>
+            </form>
+            <svg
+              viewBox="0 0 1024 1024"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
+              aria-hidden="true"
+            >
+              <circle
+                cx={512}
+                cy={512}
+                r={512}
+                fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                fillOpacity="0.7"
               />
-              <button
-                type="submit"
-                className="flex-none rounded-md bg-[#5FC4E6] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-              >
-                Envoyer
-              </button>
-            </div>
-            <p className="mt-4 text-sm leading-6 text-gray-900">
-              Nous nous soucions de vos données. Lire notre{" "}
-              <a
-                href="#"
-                className="font-semibold text-[#5FC4E6] hover:text-orange-500"
-              >
-                politique de confidentialité
-              </a>
-              .
-            </p>
-          </form>
+              <defs>
+                <radialGradient
+                  id="759c1415-0410-454c-8f7c-9a820de03641"
+                  cx={0}
+                  cy={0}
+                  r={1}
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(512 512) rotate(90) scale(512)"
+                >
+                  <stop stopColor="#7775D6" />
+                  <stop offset={1} stopColor="#E935C1" stopOpacity={0} />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </Layout>

@@ -77,7 +77,7 @@ export default function Blogs() {
                     <div className="relative">
                       <img
                         alt={tier.title}
-                        className="rounded-3xl shadow-md border-2 z-20 mb-4"
+                        className="rounded-3xl shadow-md border-2 z-10 mb-4"
                         src={tier.image}
                         style={{
                           aspectRatio: "150/100",

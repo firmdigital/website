@@ -28,7 +28,7 @@ export default function FeatureGaZ() {
     <Layout>
       <div className="relative isolate overflow-hidden rounded-2xl bg-gray-800 py-10">
         <img
-          src="https://thecrmteam.com/wp-content/uploads/2021/10/blog-digital-transformation.jpg"
+          src="./assets/blog-digital-transformation.jpg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-5"
         />
