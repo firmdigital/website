@@ -24,10 +24,10 @@ root.render(
     </Layout>
     <SoSecuriGaz />
     <FeaturesGaZ />
-    {/* <NewsLetter /> */}
-    {/* <Contact /> */}
     <Blogs />
     <Team />
+    <Contact />
+    {/* <NewsLetter /> */}
     <Footer />
   </React.StrictMode>
 );

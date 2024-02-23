@@ -14,7 +14,7 @@ const posts = [
     fullname: "Manuela ALOKPO",
     position: "Gérante",
     imageUrl:
-      "https://media.licdn.com/dms/image/D4D35AQF2ffw7eCBjmg/profile-framedphoto-shrink_400_400/0/1687550103900?e=1709222400&v=beta&t=f8nuvZ8Pi6s2VGw6pPy-y8hCR0lMsq6qZqHUGPivH3I",
+      "./assets/team/Alokpo-profil.jpeg",
     social: [
       {
         name: "linkedin",
@@ -56,7 +56,7 @@ const posts = [
     fullname: "Fatoumata THIAM",
     position: "Ingénieur electronicienne",
     imageUrl:
-      "https://media.licdn.com/dms/image/D4E03AQGeuvsMKgmR3A/profile-displayphoto-shrink_400_400/0/1692035642710?e=1714003200&v=beta&t=LyuJbG8AudVa8evLpP496g4MNhJ7OTeLZi7G-lV8nIs",
+      "./assets/team/Thiam.jpeg",
     social: [
       {
         name: "linkedin",
@@ -75,7 +75,7 @@ const posts = [
     fullname: "Sidi Yaya SIMAGA",
     position: "Développeur Fullstack",
     imageUrl:
-      "https://media.licdn.com/dms/image/D4E03AQFsYUJDhCnGXg/profile-displayphoto-shrink_400_400/0/1700996843127?e=1714003200&v=beta&t=tIh0WYYnAD76doe_yA1JMHg7taoJXxoaGW97Xf4N-HQ",
+      "./assets/team/Simaga.jpeg",
     social: [
       {
         name: "linkedin",
@@ -99,7 +99,7 @@ const posts = [
 
 export default function Team() {
   return (
-    <div className="bg-slate-50 sm:p-10 p-5 my-20">
+    <div className="bg-slate-50 px-5 py-20 my-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -125,14 +125,14 @@ export default function Team() {
               <div className="flex flex-col items-center">
                 <img
                   alt={post.fullname}
-                  className="rounded-lg hover:-translate-y-2 duration-300 shadow-md transition-all border-2 z-20 border-white -mt-[45%] sm:-mt-[35%] lg:-mt-[40%] xl:-mt-[50%] mb-4"
+                  className="rounded-lg hover:-translate-y-2 duration-300 shadow-md transition-all border-2 z-10 border-white -mt-[45%] sm:-mt-[35%] lg:-mt-[40%] xl:-mt-[50%] mb-4"
                   src={post.imageUrl}
                   style={{
                     aspectRatio: "150/150",
                     objectFit: "cover",
                   }}
                 />
-                <div className="text-center flex flex-col items-center justify-center z-20 truncate">
+                <div className="text-center flex flex-col items-center justify-center z-10 truncate">
                   <h4 className="font-bold text-gray-50">{post.fullname}</h4>
                   <p className="text-sm text-gray-700">{post.position}</p>
                   <div className="flex items-center gap-2">
@@ -175,14 +175,14 @@ export default function Team() {
                   <div className="flex flex-col items-center">
                     <img
                       alt={post.fullname}
-                      className="rounded-lg hover:scale-105 duration-300 shadow-md transition-all border-2 z-20 border-white mb-4"
+                      className="rounded-lg hover:scale-105 duration-300 shadow-md transition-all border-2 z-10 border-white mb-4"
                       src={post.imageUrl}
                       style={{
                         aspectRatio: "150/150",
                         objectFit: "cover",
                       }}
                     />
-                    <div className="text-center flex flex-col items-center justify-center z-20 truncate">
+                    <div className="text-center flex flex-col items-center justify-center z-10 truncate">
                       <h4 className="font-bold text-gray-50">
                         {post.fullname}
                       </h4>

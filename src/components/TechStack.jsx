@@ -20,7 +20,7 @@ function TechStack() {
       </h4>
       <div className="relative isolate overflow-hidden bg-slate-900 rounded-2xl shadow-sm shadow-slate-400  py-10">
         <img
-          src="https://tms-outsource.com/blog/wp-content/uploads/2019/02/luca-bravo-217276-unsplash.jpg"
+          src="./assets/tech-bg.jpeg"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
         />
