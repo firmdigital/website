@@ -24,6 +24,7 @@ body {
     }
 
 }
+
 /* Ajoutez cette classe dans votre fichier CSS */
 .degrade-img::after {
     content: '';
@@ -32,6 +33,26 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, #ff0099, #493240); /* Exemple de dégradé */
-    pointer-events: none; /* Permet les interactions avec l'élément sous-jacent */
-  }
+    background: linear-gradient(45deg, #ff0099, #493240);
+    /* Exemple de dégradé */
+    pointer-events: none;
+    /* Permet les interactions avec l'élément sous-jacent */
+}
+
+.swiper {
+    width: 100%;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}

@@ -1,7 +1,15 @@
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+// import "./index.css"
+
+// import required modules
+import { EffectCoverflow } from "swiper/modules";
 
 const services = [
   {
@@ -92,12 +100,23 @@ function Services() {
       </div>
 
       {/* Mobile Servie */}
-      <div className="w-full flex lg:hidden py-10 px-2">
+      <div className="w-full flex lg:hidden py-10">
         <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1.3}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          modules={[EffectCoverflow]}
+          className="mySwiper"
           spaceBetween={10}
-          slidesPerView={1.1}
           breakpoints={{
-            // when window width is >= 768px
             500: {
               slidesPerView: 2.1,
             },

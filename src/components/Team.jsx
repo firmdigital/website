@@ -1,7 +1,12 @@
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-cards";
+
+// import required modules
+import { EffectCards } from "swiper/modules";
 
 const posts = [
   {
@@ -151,14 +156,10 @@ export default function Team() {
         {/* Mobile Servie */}
         <div className="w-full flex sm:hidden py-10 px-2">
           <Swiper
-            spaceBetween={10}
-            slidesPerView={1.1}
-            breakpoints={{
-              // when window width is >= 768px
-              500: {
-                slidesPerView: 2.1,
-              },
-            }}
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
           >
             {posts.map((post) => (
               <SwiperSlide key={post.id}>
