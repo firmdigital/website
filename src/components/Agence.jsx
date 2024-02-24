@@ -1,6 +1,6 @@
 function Agence() {
   return (
-    <div className="w-full flex md:flex-row flex-col md:justify-between md:items-center md:gap-10 gap-5">
+    <div id="about" className="w-full flex md:flex-row flex-col md:justify-between md:items-center md:gap-10 gap-5">
       <div className="flex flex-col gap-3 xl:max-w-[55%] md:max-w-[50%] max-w-full">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           DÉCOUVREZ

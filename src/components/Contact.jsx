@@ -1,10 +1,16 @@
 import { MapIcon } from "@heroicons/react/20/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   // Initialiser avec un tableau vide pour stocker les ids des services sélectionnés
   const [selectedServices, setSelectedServices] = useState([]);
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
   const services = [
     { id: 1, name: "Développement d'application" },
@@ -23,8 +29,38 @@ export default function Contact() {
     );
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const templateId = "template_ajmasg5"
+    const serviceID = "service_yu2pmpr"
+    const publicID = "u3r2fez9i5SZSBI9L"
+
+    // const templateParams = {
+    //   from_firstname: firstName,
+    //   from_lastname: lastName,
+    //   from_phone: phone,
+    //   to_name: "FIRM DIGITAL",
+    //   message: message
+    // }
+
+    emailjs
+      .sendForm(serviceID, templateId, form.current,{
+        publicKey: publicID
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
-    <div className="relative isolate bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
+    <div className="relative isolate shadow bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
       <div className="flex items-start h-full w-full min-h-full md:flex-row flex-col gap-10">
         {/* Contact info */}
         <div className="flex flex-col gap-4 relative w-full h-full md:w-2/5">
@@ -107,7 +143,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form action="#" method="POST" className="mt-10">
+          <form ref={form} onSubmit={sendEmail} method="POST" className="mt-10">
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
                 <div>
@@ -122,6 +158,8 @@ export default function Contact() {
                       type="text"
                       name="first-name"
                       id="first-name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value) }
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -139,6 +177,8 @@ export default function Contact() {
                       type="text"
                       name="last-name"
                       id="last-name"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value) }
                       autoComplete="family-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -156,6 +196,8 @@ export default function Contact() {
                       type="email"
                       name="email"
                       id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value) }
                       autoComplete="email"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -173,6 +215,8 @@ export default function Contact() {
                       type="tel"
                       name="phone-number"
                       id="phone-number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value) }
                       autoComplete="tel"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -189,6 +233,8 @@ export default function Contact() {
                     <textarea
                       name="message"
                       id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value) }
                       rows={4}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                       defaultValue={""}
