@@ -44,6 +44,14 @@ function Navbar() {
               <div key={nav.id}>
                 <a
                   href={nav.href}
+                  onClick={(e) => {
+                    e.preventDefault(); // Empêche le comportement par défaut du lien
+                    document
+                      .getElementById(nav.href.substring(1))
+                      .scrollIntoView({
+                        behavior: "smooth", // Active l'animation de défilement
+                      });
+                  }}
                   className="text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300"
                 >
                   {nav.name}
@@ -131,6 +139,15 @@ function Navbar() {
                   <div key={nav.id}>
                     <a
                       href={nav.href}
+                      onClick={(e) => {
+                        e.preventDefault(); // Empêche le comportement par défaut du lien
+                        document
+                          .getElementById(nav.href.substring(1))
+                          .scrollIntoView({
+                            behavior: "smooth", // Active l'animation de défilement
+                          });
+                          setMobileMenu(false);
+                      }}
                       className="font-semibold text-base cursor-pointer"
                     >
                       {nav.name}

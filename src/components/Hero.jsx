@@ -1,6 +1,13 @@
+import { useState } from "react";
+import AlertModal from "./Alert";
+
 function Hero() {
+  const [showAlert, setShowAlert] = useState(false);
+
   return (
     <>
+      {showAlert && <AlertModal setClose={setShowAlert} />}
+
       <div className="relative mx-auto max-w-[1920px]">
         <div className="relative flex items-center justify-between">
           <div
@@ -31,7 +38,7 @@ function Hero() {
                 offrant une gamme variée de services pour répondre aux besoins
                 diversifiés de ses clients.
               </p>
-              <div className="relative w-fit py-5 cursor-pointer">
+              <div onClick={() => setShowAlert(true)} className="relative w-fit py-5 cursor-pointer">
                 <div className="flex items-center gap-4">
                   <span className="font-semibold text-slate-500 ml-2 text-sm">
                     En Savoir Plus
@@ -81,7 +88,10 @@ function Hero() {
 
         <div className="p-10 my-10 max-w-[1920px] xl:mx-48 md:mx-8 mx-4 bg-[#5FC4E6] shadow-lg rounded-lg shadow-slate-600/10">
           <div className="flex md:flex-row flex-col items-center gap-8 w-full">
-            <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
+            <div
+              onClick={() => setShowAlert(true)}
+              className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
+            >
               <h4 className="text-[#5FC4E6] text-sm truncate">
                 J&apos;ai un <br />{" "}
                 <span className="font-semibold">Projet Digital</span>
@@ -102,7 +112,10 @@ function Hero() {
               </svg>
             </div>
 
-            <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
+            <div
+              onClick={() => setShowAlert(true)}
+              className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
+            >
               <h4 className="text-[#5FC4E6] text-sm truncate">
                 J&apos;ai besoin d&apos;une <br />{" "}
                 <span className="font-semibold">Expertise UX/UI</span>
@@ -123,7 +136,10 @@ function Hero() {
               </svg>
             </div>
 
-            <div className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md">
+            <div
+              onClick={() => setShowAlert(true)}
+              className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
+            >
               <h4 className="text-[#5FC4E6] text-sm truncate">
                 J&apos;ai besoin d&apos;une <br />{" "}
                 <span className="font-semibold">Expertise Technologique</span>

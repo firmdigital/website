@@ -8,11 +8,12 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SoSecuriGaz from './components/SoSecuriGaz';
 import FeaturesGaZ from './components/FeaturesGaZ';
-import NewsLetter from './components/NewsLetter';
+// import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Team from './components/Team';
 import Blogs from './components/Blog';
+import BackToTopButton from './components/BackToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
     <Contact />
     {/* <NewsLetter /> */}
     <Footer />
+    <BackToTopButton />
   </React.StrictMode>
 );
 
