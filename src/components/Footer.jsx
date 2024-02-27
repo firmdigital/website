@@ -4,6 +4,7 @@ const navigation = {
   social: [
     {
       name: "Facebook",
+      id:1,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -17,6 +18,7 @@ const navigation = {
     },
     {
       name: "Instagram",
+      id:2,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -30,6 +32,7 @@ const navigation = {
     },
     {
       name: "X",
+      id:3,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -39,6 +42,7 @@ const navigation = {
     },
     {
       name: "Linkedin",
+      id:4,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -58,7 +62,7 @@ export default function Footer() {
           aria-label="Footer"
         >
           {navlinks.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.id} className="pb-6">
               <a
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-white"
@@ -71,7 +75,7 @@ export default function Footer() {
         <div className="mt-10 flex justify-center space-x-10">
           {navigation.social.map((item) => (
             <a
-              key={item.name}
+              key={item.id}
               href={item.href}
               className="text-gray-400 hover:text-gray-500"
             >

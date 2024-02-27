@@ -1,16 +1,19 @@
 import { MapIcon } from "@heroicons/react/20/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   // Initialiser avec un tableau vide pour stocker les ids des services sélectionnés
   const [selectedServices, setSelectedServices] = useState([]);
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [phone, setPhone] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [succesMessage, setSuccessMessage] = useState("");
 
   const services = [
     { id: 1, name: "Développement d'application" },
@@ -22,6 +25,7 @@ export default function Contact() {
 
   // Gérer le changement de chaque case à cocher
   const handleServiceChange = (serviceId) => {
+    setError("");
     setSelectedServices((prevSelectedServices) =>
       prevSelectedServices.includes(serviceId)
         ? prevSelectedServices.filter((id) => id !== serviceId)
@@ -33,9 +37,9 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    const templateId = "template_ajmasg5"
-    const serviceID = "service_yu2pmpr"
-    const publicID = "u3r2fez9i5SZSBI9L"
+    const templateId = "template_ajmasg5";
+    const serviceID = "service_yu2pmpr";
+    const publicID = "u3r2fez9i5SZSBI9L";
 
     // const templateParams = {
     //   from_firstname: firstName,
@@ -44,18 +48,21 @@ export default function Contact() {
     //   to_name: "FIRM DIGITAL",
     //   message: message
     // }
+    setIsLoading(true);
 
     emailjs
-      .sendForm(serviceID, templateId, form.current,{
-        publicKey: publicID
+      .sendForm(serviceID, templateId, form.current, {
+        publicKey: publicID,
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setIsLoading(false);
+          setSuccessMessage("Votre message a été envoyer avec succès.")
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          setIsLoading(false);
+          setError("Erreur d'envoi du message. Veuillez réessayer SVP !! ");
+        }
       );
   };
 
@@ -159,7 +166,10 @@ export default function Contact() {
                       name="first-name"
                       id="first-name"
                       value={firstName}
-                      onChange={(e) => setFirstName(e.target.value) }
+                      onChange={(e) => {
+                        setError("");
+                        setFirstName(e.target.value);
+                      }}
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -178,7 +188,10 @@ export default function Contact() {
                       name="last-name"
                       id="last-name"
                       value={lastName}
-                      onChange={(e) => setLastName(e.target.value) }
+                      onChange={(e) => {
+                        setError("");
+                        setLastName(e.target.value);
+                      }}
                       autoComplete="family-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -197,7 +210,10 @@ export default function Contact() {
                       name="email"
                       id="email"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value) }
+                      onChange={(e) => {
+                        setError("");
+                        setEmail(e.target.value);
+                      }}
                       autoComplete="email"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -216,7 +232,10 @@ export default function Contact() {
                       name="phone-number"
                       id="phone-number"
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value) }
+                      onChange={(e) => {
+                        setError("");
+                        setPhone(e.target.value);
+                      }}
                       autoComplete="tel"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
@@ -234,19 +253,45 @@ export default function Contact() {
                       name="message"
                       id="message"
                       value={message}
-                      onChange={(e) => setMessage(e.target.value) }
+                      onChange={(e) => {
+                        setError("");
+                        setMessage(e.target.value);
+                      }}
                       rows={4}
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
-                      defaultValue={""}
+                      className="block resize-none w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#5FC4E6] sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
               </div>
+
+              <div className="text-red-500 text-center text-sm py-2">
+                {error}
+              </div>
+              <div className="text-green-500 text-center text-sm py-2">
+                {succesMessage}
+              </div>
               <div className="mt-8 flex justify-end">
                 <button
                   type="submit"
-                  className="rounded-md bg-[#5FC4E6] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5FC4E6]"
+                  className="rounded-md flex items-center justify-center gap-2 bg-[#5FC4E6] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5FC4E6]"
                 >
+                  {isLoading && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="img"
+                      className="h-4 w-4 animate-spin fill-current text-white"
+                      width="32"
+                      height="32"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 1024 1024"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M988 548c-19.9 0-36-16.1-36-36c0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9a437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7c26.7 63.1 40.2 130.2 40.2 199.3c.1 19.9-16 36-35.9 36z"
+                      ></path>
+                    </svg>
+                  )}
                   Envoyer
                 </button>
               </div>

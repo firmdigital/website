@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const tiers = [
   {
     title: "Visite à la Société KAMA GAZ",
-    id: "tier-hobby",
+    id: 1,
     href: "#",
     image:
       "https://www.maliweb.net/wp-content/news/images/2019/08/Kama-gaz.jpg",
@@ -17,7 +17,7 @@ const tiers = [
   },
   {
     title: "Visite à la Société KAMA GAZ",
-    id: "tier-hobby",
+    id: 2,
     href: "#",
     image:
       "https://www.maliweb.net/wp-content/news/images/2019/08/Kama-gaz.jpg",
