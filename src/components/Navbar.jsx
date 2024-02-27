@@ -3,6 +3,30 @@ import { navlinks } from "../Navlinks";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [activeMenu, setActiveMenu] = useState('');
+
+  useEffect(() => {
+    const sectionActive = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          setActiveMenu(id);
+        }
+      });
+    }, { threshold: 0.7 });
+
+    const sections = document.querySelectorAll('about', 'service', 'contact', 'project', 'blog');
+
+    sections.forEach((section) => {
+      sectionActive.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        sectionActive.unobserve(section);
+      });
+    };
+  }, []);
 
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
@@ -46,13 +70,14 @@ function Navbar() {
                   href={nav.href}
                   onClick={(e) => {
                     e.preventDefault(); // Empêche le comportement par défaut du lien
+                    setActiveMenu(nav.href);
                     document
                       .getElementById(nav.href.substring(1))
                       .scrollIntoView({
                         behavior: "smooth", // Active l'animation de défilement
                       });
                   }}
-                  className="text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300"
+                  className={`${activeMenu === nav.href && 'text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded'} text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
                 >
                   {nav.name}
                 </a>
@@ -141,6 +166,7 @@ function Navbar() {
                       href={nav.href}
                       onClick={(e) => {
                         e.preventDefault(); // Empêche le comportement par défaut du lien
+                        setActiveMenu(nav.href);
                         document
                           .getElementById(nav.href.substring(1))
                           .scrollIntoView({
@@ -148,7 +174,7 @@ function Navbar() {
                           });
                           setMobileMenu(false);
                       }}
-                      className="font-semibold text-base cursor-pointer"
+                      className={`${activeMenu === nav.href && 'text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded'} font-semibold text-base cursor-pointer`}
                     >
                       {nav.name}
                     </a>
