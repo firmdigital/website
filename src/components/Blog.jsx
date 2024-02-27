@@ -1,6 +1,8 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AlertModal from "./Alert";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const tiers = [
   {
@@ -27,6 +29,10 @@ const tiers = [
 
 export default function Blogs() {
   const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -79,6 +85,9 @@ export default function Blogs() {
                 {tiers.map((tier) => (
                   <div
                     key={tier.id}
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500"
                     className="flex flex-col justify-between hover:scale-105 duration-300 transition-all rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/10 p-5"
                   >
                     <div>

@@ -1,8 +1,14 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   // Fonction pour détecter le scroll
   const toggleVisibility = () => {
@@ -33,6 +39,9 @@ const BackToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
         style={{
           position: "fixed",
           bottom: "20px",
@@ -42,10 +51,10 @@ const BackToTopButton = () => {
           padding: "10px",
           borderRadius: "100%",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-          zIndex:"10"
+          zIndex: "10",
         }}
       >
-        <ArrowUpIcon className="w-5 text-white"/>
+        <ArrowUpIcon className="w-5 text-white" />
       </button>
     )
   );
