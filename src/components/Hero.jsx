@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AlertModal from "./Alert";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Hero() {
   const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
       {showAlert && <AlertModal setClose={setShowAlert} />}
 
       <div className="relative mx-auto max-w-[1920px]">
-        <div className="relative flex items-center justify-between">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          className="relative flex items-center justify-between"
+        >
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -38,7 +48,10 @@ function Hero() {
                 offrant une gamme variée de services pour répondre aux besoins
                 diversifiés de ses clients.
               </p>
-              <div onClick={() => setShowAlert(true)} className="relative w-fit py-5 cursor-pointer">
+              <div
+                onClick={() => setShowAlert(true)}
+                className="relative w-fit py-5 cursor-pointer"
+              >
                 <div className="flex items-center gap-4">
                   <span className="font-semibold text-slate-500 ml-2 text-sm">
                     En Savoir Plus
