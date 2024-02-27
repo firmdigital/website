@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
 import AlertModal from "./Alert";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function Hero() {
   const [showAlert, setShowAlert] = useState(false);
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <>
@@ -16,8 +10,6 @@ function Hero() {
 
       <div className="relative mx-auto max-w-[1920px]">
         <div
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
           className="relative flex items-center justify-between"
         >
           <div
