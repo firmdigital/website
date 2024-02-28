@@ -208,7 +208,7 @@ function Navbar() {
                 );
               })}
             </div>
-            <hr className="border-[#5FC4E6]/40" />
+            <hr className="border-[#5FC4E6]/40 mb-5" />
             <a
               href="#contact"
               onClick={(e) => {
@@ -219,7 +219,7 @@ function Navbar() {
                 });
                 setMobileMenu(false);
               }}
-              className="bg-[#5FC4E6] text-semibold my-5 hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20"
+              className="bg-[#5FC4E6] text-semibold hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20"
             >
               Nous Contacter
             </a>
