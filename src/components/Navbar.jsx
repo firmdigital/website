@@ -3,19 +3,28 @@ import { navlinks } from "../Navlinks";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [activeMenu, setActiveMenu] = useState('');
+  const [activeMenu, setActiveMenu] = useState("");
 
   useEffect(() => {
-    const sectionActive = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          setActiveMenu(id);
-        }
-      });
-    }, { threshold: 0.7 });
+    const sectionActive = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            setActiveMenu(id);
+          }
+        });
+      },
+      { threshold: 0.7 }
+    );
 
-    const sections = document.querySelectorAll('about', 'service', 'contact', 'project', 'blog');
+    const sections = document.querySelectorAll(
+      "about",
+      "service",
+      "contact",
+      "project",
+      "blog"
+    );
 
     sections.forEach((section) => {
       sectionActive.observe(section);
@@ -77,7 +86,10 @@ function Navbar() {
                         behavior: "smooth", // Active l'animation de défilement
                       });
                   }}
-                  className={`${activeMenu === nav.href && 'text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded'} text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
+                  className={`${
+                    activeMenu === nav.href &&
+                    "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"
+                  } text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-base hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
                 >
                   {nav.name}
                 </a>
@@ -86,9 +98,20 @@ function Navbar() {
           })}
         </div>
 
-        <button className="bg-[#5FC4E6] text-semibold hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20">
+        <a
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+            setActiveMenu("#contact");
+            document.getElementById("contact").scrollIntoView({
+              behavior: "smooth", // Active l'animation de défilement
+            });
+            setMobileMenu(false);
+          }}
+          className="bg-[#5FC4E6] text-semibold hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20"
+        >
           Nous Contacter
-        </button>
+        </a>
       </div>
       {/* End Desktop Menu */}
 
@@ -172,9 +195,12 @@ function Navbar() {
                           .scrollIntoView({
                             behavior: "smooth", // Active l'animation de défilement
                           });
-                          setMobileMenu(false);
+                        setMobileMenu(false);
                       }}
-                      className={`${activeMenu === nav.href && 'text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded'} font-semibold text-base cursor-pointer`}
+                      className={`${
+                        activeMenu === nav.href &&
+                        "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"
+                      } font-semibold text-base cursor-pointer`}
                     >
                       {nav.name}
                     </a>
@@ -183,9 +209,20 @@ function Navbar() {
               })}
             </div>
             <hr className="border-[#5FC4E6]/40" />
-            <button className="bg-[#5FC4E6] text-semibold my-5 hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20">
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+                setActiveMenu("#contact");
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth", // Active l'animation de défilement
+                });
+                setMobileMenu(false);
+              }}
+              className="bg-[#5FC4E6] text-semibold my-5 hover:bg-transparent hover:text-[#5FC4E6] duration-300 transition-all hover:scale-100 hover:border-[#5FC4E6] hover:border-2 text-white text-sm px-4 py-2 rounded-full hover:shadow-md hover:shadow-[#5FC4E6]/20"
+            >
               Nous Contacter
-            </button>
+            </a>
           </div>
         )}
       </div>

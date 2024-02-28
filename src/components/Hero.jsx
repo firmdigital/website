@@ -9,9 +9,7 @@ function Hero() {
       {showAlert && <AlertModal setClose={setShowAlert} />}
 
       <div className="relative mx-auto max-w-[1920px]">
-        <div
-          className="relative flex items-center justify-between"
-        >
+        <div className="relative flex items-center justify-between">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -93,8 +91,14 @@ function Hero() {
 
         <div className="p-10 my-10 max-w-[1920px] xl:mx-48 md:mx-8 mx-4 bg-[#5FC4E6] shadow-lg rounded-lg shadow-slate-600/10">
           <div className="flex md:flex-row flex-col items-center gap-8 w-full">
-            <div
-              onClick={() => setShowAlert(true)}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth", // Active l'animation de défilement
+                });
+              }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
               <h4 className="text-[#5FC4E6] text-sm truncate">
@@ -115,10 +119,16 @@ function Hero() {
                   d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
                 />
               </svg>
-            </div>
+            </a>
 
-            <div
-              onClick={() => setShowAlert(true)}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth", // Active l'animation de défilement
+                });
+              }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
               <h4 className="text-[#5FC4E6] text-sm truncate">
@@ -139,10 +149,16 @@ function Hero() {
                   d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
                 />
               </svg>
-            </div>
+            </a>
 
-            <div
-              onClick={() => setShowAlert(true)}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth", // Active l'animation de défilement
+                });
+              }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
               <h4 className="text-[#5FC4E6] text-sm truncate">
@@ -163,7 +179,7 @@ function Hero() {
                   d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
       </div>

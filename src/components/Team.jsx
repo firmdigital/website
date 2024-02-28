@@ -75,7 +75,7 @@ const posts = [
     fullname: "Sidi Yaya SIMAGA",
     position: "Développeur Fullstack",
     imageUrl:
-      "./assets/team/Simaga.jpeg",
+      "./assets/team/Simaga.jpg",
     social: [
       {
         name: "linkedin",
