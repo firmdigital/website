@@ -14,7 +14,7 @@ const posts = [
     fullname: "Manuela ALOKPO",
     position: "Gérante",
     imageUrl:
-      "./assets/team/Alokpo-profil.jpeg",
+      "./assets/team/Alokpo-profil.png",
     social: [
       {
         name: "linkedin",
@@ -32,7 +32,7 @@ const posts = [
     id: 2,
     fullname: "Mohamed Lamine KONE",
     position: "Développeur Fullstack",
-    imageUrl: "./assets/team/Malla.jpg",
+    imageUrl: "./assets/team/Malla.png",
     social: [
       {
         name: "linkedin",
@@ -56,7 +56,7 @@ const posts = [
     fullname: "Fatoumata THIAM",
     position: "Ingénieur electronicienne",
     imageUrl:
-      "./assets/team/Thiam.jpeg",
+      "./assets/team/Thiam.jpg",
     social: [
       {
         name: "linkedin",

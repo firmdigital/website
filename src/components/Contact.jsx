@@ -41,23 +41,24 @@ export default function Contact() {
     const serviceID = "service_yu2pmpr";
     const publicID = "u3r2fez9i5SZSBI9L";
 
-    // const templateParams = {
-    //   from_firstname: firstName,
-    //   from_lastname: lastName,
-    //   from_phone: phone,
-    //   to_name: "FIRM DIGITAL",
-    //   message: message
-    // }
+    const templateParams = {
+      from_firstname: firstName,
+      from_lastname: lastName,
+      from_phone: phone,
+      from_hobbies: selectedServices,
+      to_name: "FIRM DIGITAL",
+      message: message,
+    };
     setIsLoading(true);
 
     emailjs
-      .sendForm(serviceID, templateId, form.current, {
+      .send(serviceID, templateId, templateParams, {
         publicKey: publicID,
       })
       .then(
         () => {
           setIsLoading(false);
-          setSuccessMessage("Votre message a été envoyer avec succès.")
+          setSuccessMessage("Votre message a été envoyer avec succès.");
         },
         (error) => {
           setIsLoading(false);
@@ -67,7 +68,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative isolate shadow bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
+    <div className="relative isolate bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
       <div className="flex items-start h-full w-full min-h-full md:flex-row flex-col gap-10">
         {/* Contact info */}
         <div className="flex flex-col gap-4 relative w-full h-full md:w-2/5">
@@ -130,27 +131,28 @@ export default function Contact() {
         </div>
         {/* Form div */}
         <div className="flex-1 md:w-3/5 w-full bg-white shadow-xl shadow-slate-200 h-full min-h-full rounded-xl p-4">
-          <span className="font-semibold text-base">
-            Je suis intéréssé par :
-          </span>
-          <div className="flex flex-wrap gap-x-2 gap-y-1.5 my-2">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                onClick={() => handleServiceChange(service.id)}
-                className={`cursor-pointer px-2 py-1 text-xs rounded ${
-                  selectedServices.includes(service.id)
-                    ? "bg-[#5FC4E6] py-1.5 text-white"
-                    : "border border-[#5FC4E6] text-[#5FC4E6]"
-                }`}
-              >
-                {service.name}
-              </div>
-            ))}
-          </div>
-
           {/* Form */}
-          <form ref={form} onSubmit={sendEmail} method="POST" className="mt-10">
+          <form ref={form} onSubmit={sendEmail} method="POST">
+            <div className="mb-10">
+              <span className="font-semibold text-base">
+                Je suis intéréssé par :
+              </span>
+              <div className="flex flex-wrap gap-x-2 gap-y-1.5">
+                {services.map((service) => (
+                  <div
+                    key={service.id}
+                    onClick={() => handleServiceChange(service.id)}
+                    className={`cursor-pointer px-2 py-1 text-xs rounded ${
+                      selectedServices.includes(service.id)
+                        ? "bg-[#5FC4E6] py-1.5 text-white"
+                        : "border border-[#5FC4E6] text-[#5FC4E6]"
+                    }`}
+                  >
+                    {service.name}
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
                 <div>
@@ -264,10 +266,10 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="text-red-500 text-center text-sm py-2">
+              <div className="text-red-500 text-center text-sm pt-2">
                 {error}
               </div>
-              <div className="text-green-500 text-center text-sm py-2">
+              <div className="text-green-500 text-center text-sm pt-2">
                 {succesMessage}
               </div>
               <div className="mt-8 flex justify-end">
