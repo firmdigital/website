@@ -68,7 +68,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative isolate bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
+    <div id="contact" className="relative isolate bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
       <div className="flex items-start h-full w-full min-h-full md:flex-row flex-col gap-10">
         {/* Contact info */}
         <div className="flex flex-col gap-4 relative w-full h-full md:w-2/5">
