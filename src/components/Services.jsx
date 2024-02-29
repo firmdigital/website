@@ -83,7 +83,7 @@ function Services() {
                 <h1 className="font-semibold leading-5 text-lg uppercase">
                   {service.name}
                 </h1>
-                <span className="text-sm text-gray-400 overflow-hidden text-ellipsis">
+                <span className="text-sm text-gray-500 overflow-hidden text-ellipsis">
                   {service.desription}
                 </span>
               </div>
@@ -129,7 +129,7 @@ function Services() {
                   <h1 className="font-semibold leading-5 text-lg uppercase">
                     {service.name}
                   </h1>
-                  <span className="text-sm text-gray-400 font-light">
+                  <span className="text-sm text-gray-500 font-light">
                     {service.desription}
                   </span>
                 </div>
