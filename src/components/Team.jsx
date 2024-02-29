@@ -18,7 +18,7 @@ const posts = [
     social: [
       {
         name: "linkedin",
-        url: "",
+        url: "https://www.linkedin.com/in/manuela-alokpo-0299a7115/",
         logo: "https://api.iconify.design/brandico:linkedin-rect.svg",
       },
       {
@@ -36,17 +36,17 @@ const posts = [
     social: [
       {
         name: "linkedin",
-        url: "",
+        url: "https://www.linkedin.com/in/mohamed-lamine-kon%C3%A9-b51999193/",
         logo: "https://api.iconify.design/brandico:linkedin-rect.svg",
       },
       {
         name: "github",
-        url: "",
+        url: "https://github.com/malladev",
         logo: "https://api.iconify.design/logos:github-icon.svg",
       },
       {
         name: "twitter",
-        url: "",
+        url: "https://twitter.com/malladev223",
         logo: "https://api.iconify.design/fa6-brands:square-x-twitter.svg",
       },
     ],
@@ -60,14 +60,9 @@ const posts = [
     social: [
       {
         name: "linkedin",
-        url: "",
+        url: "https://www.linkedin.com/in/fatima-thiam-b96109244/",
         logo: "https://api.iconify.design/brandico:linkedin-rect.svg",
-      },
-      {
-        name: "twitter",
-        url: "",
-        logo: "https://api.iconify.design/fa6-brands:square-x-twitter.svg",
-      },
+      }
     ],
   },
   {
@@ -79,7 +74,7 @@ const posts = [
     social: [
       {
         name: "linkedin",
-        url: "",
+        url: "https://www.linkedin.com/in/sidi-simaga/",
         logo: "https://api.iconify.design/brandico:linkedin-rect.svg",
       },
       {
