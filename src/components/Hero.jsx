@@ -38,8 +38,14 @@ function Hero() {
                 offrant une gamme variée de services pour répondre aux besoins
                 diversifiés de ses clients.
               </p>
-              <div
-                onClick={() => setShowAlert(true)}
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault(); // Empêche le comportement par défaut du lien
+                  document.getElementById("about").scrollIntoView({
+                    behavior: "smooth", // Active l'animation de défilement
+                  });
+                }}
                 className="relative w-fit py-5 cursor-pointer"
               >
                 <div className="flex items-center gap-4">
@@ -66,7 +72,7 @@ function Hero() {
                   alt=""
                   className="w-full absolute -bottom-2 -z-10 right-3"
                 />
-              </div>
+              </a>
             </div>
           </div>
 
