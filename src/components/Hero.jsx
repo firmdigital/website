@@ -30,7 +30,7 @@ function Hero() {
                   projets digitaux.
                 </span>
               </h1>
-              <p className="text-gray-700 lg:text-left text-center font-light max-w-xl lg:text-lg text-base">
+              <p className="text-gray-700 lg:text-left text-center font-medium max-w-xl lg:text-lg text-base">
                 <span className="font-semibold hover:text-orange-500">
                   FIRM DIGITAL SARL
                 </span>{" "}

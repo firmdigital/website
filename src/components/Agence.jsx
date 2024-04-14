@@ -8,20 +8,20 @@ function Agence() {
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           DÉCOUVREZ
         </span>
-        <h1 className="md:text-5xl text-3xl font-thin">
+        <h1 className="md:text-5xl text-3xl font-medium text-gray-700">
           Notre{" "}
           <span className="font-bold text-[#5FC4E6] hover:text-orange-500">
             agence
           </span>
         </h1>
-        <p className="md:text-base leading-5 text-sm font-light text-gray-500 mt-3 text-justify">
+        <p className="md:text-base leading-5 text-sm font-medium text-gray-500 mt-3 text-justify">
           À la pointe de la technologie, FIRM DIGITAL excelle dans le
           développement d&apos;applications, le design UX/UI,
           l&apos;électronique et les systèmes embarqués, le community management
           et autres. Notre équipe expérimentée et créative travaille de concert
           pour transformer vos idées en solutions digitales exceptionnelles.
         </p>
-        <p className="md:text-base leading-5 text-sm font-light text-gray-500 mt-3 text-justify">
+        <p className="md:text-base leading-5 text-sm font-medium text-gray-500 mt-3 text-justify">
           Chez FIRM DIGITAL, la confiance de nos clients est primordiale. Nous
           sommes fiers de cultiver des relations solides et durables, basées sur
           la transparence, l&apos;intégrité et des résultats exceptionnels. Explorez

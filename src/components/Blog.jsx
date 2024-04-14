@@ -54,7 +54,7 @@ export default function Blogs() {
             </p>
           </div>
           <div className="relative mt-6">
-            <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
+            <p className="mx-auto max-w-2xl font-medium text-lg leading-8 text-white/60">
               Découvrez le monde passionnant du digital à travers nos articles
               informatifs et inspirants.
             </p>
@@ -128,7 +128,7 @@ export default function Blogs() {
                     <h3 className="text-lg font-semibold leading-8 tracking-tight text-[#449ab7]">
                       Prêt à commencer ?
                     </h3>
-                    <p className="mt-1 text-base leading-7 text-gray-600">
+                    <p className="mt-1 text-base font-medium leading-7 text-gray-600">
                       Rejoignez-nous dans cette aventure digitale passionnante
                       et restez à la pointe de l&apos;industrie. Explorez nos
                       articles dès maintenant !

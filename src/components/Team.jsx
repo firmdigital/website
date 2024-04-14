@@ -97,13 +97,13 @@ export default function Team() {
     <div className="bg-slate-50 px-5 py-20 my-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">
             Notre Équipe{" "}
             <span className="text-[#5FC4E6] hover:text-orange-500">
               Exceptionnelle
             </span>
           </h2>
-          <p className="mt-2 text leading-8 text-gray-600">
+          <p className="mt-2 text font-medium leading-8 text-gray-600">
             Découvrez les visages derrière notre succès et apprenez à connaître
             les personnes qui font de <b>FIRM DIGITAL</b> un acteur majeur de
             l&apos;ère digitale.
