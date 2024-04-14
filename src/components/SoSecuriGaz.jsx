@@ -28,10 +28,10 @@ export default function SoSecuriGaz() {
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
                   NOS PROJETS
                 </span>
-                <h1 className="text-4xl mt-5 font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="text-4xl mt-5 font-bold tracking-tight text-gray-700 sm:text-6xl">
                   SO SECURIGAZ
                 </h1>
-                <p className="mt-6 text-base leading-8 text-gray-600">
+                <p className="mt-6 text-base font-medium leading-8 text-gray-600">
                   SO SECURIGAZ est un dispositif qui vise à préserver et à
                   sauver des vies humaines contre les accidents domestiques dûs
                   au cas d&apos;oubli ou de fuite de gaz.

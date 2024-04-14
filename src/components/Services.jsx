@@ -62,7 +62,7 @@ function Services() {
         <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           NOS SERVICES
         </span>
-        <h1 className="md:text-5xl text-3xl font-thin text-center leading-7">
+        <h1 className="md:text-5xl text-gray-700 text-3xl font-medium text-center leading-7">
           Ce que{" "}
           <span className="text-[#5FC4E6] hover:text-orange-500 font-bold">
             NOUS FAISONS
@@ -83,7 +83,7 @@ function Services() {
                 <h1 className="font-semibold leading-5 text-lg uppercase">
                   {service.name}
                 </h1>
-                <span className="text-sm text-gray-500 overflow-hidden text-ellipsis">
+                <span className="text-sm font-medium text-gray-500 overflow-hidden text-ellipsis">
                   {service.desription}
                 </span>
               </div>
@@ -129,7 +129,7 @@ function Services() {
                   <h1 className="font-semibold leading-5 text-lg uppercase">
                     {service.name}
                   </h1>
-                  <span className="text-sm text-gray-500 font-light">
+                  <span className="text-sm text-gray-500 font-medium">
                     {service.desription}
                   </span>
                 </div>

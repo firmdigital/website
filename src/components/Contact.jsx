@@ -16,11 +16,13 @@ export default function Contact() {
   const [succesMessage, setSuccessMessage] = useState("");
 
   const services = [
-    { id: 1, name: "Développement d'application" },
-    { id: 2, name: "Ux Ui Design" },
-    { id: 3, name: "Design 3D" },
-    { id: 4, name: "Design Graphique" },
-    { id: 5, name: "Community Management" },
+    { id: 1, name: "Le développement d'application" },
+    { id: 2, name: "L'Ux Ui Design" },
+    { id: 3, name: "Le Design 3D" },
+    { id: 4, name: "Le Design Graphique" },
+    { id: 5, name: "Le Community Management" },
+    { id: 6, name: "Une Solution électronique" },
+    { id: 7, name: "La Maintenance informatique" },
   ];
 
   // Gérer le changement de chaque case à cocher
@@ -72,7 +74,7 @@ export default function Contact() {
       <div className="flex items-start h-full w-full min-h-full md:flex-row flex-col gap-10">
         {/* Contact info */}
         <div className="flex flex-col gap-4 relative w-full h-full md:w-2/5">
-          <h1 className="font-bold lg:text-3xl text-xl">
+          <h1 className="font-bold text-gray-700 lg:text-3xl text-xl">
             Discutons ensemble de quelque chose de{" "}
             <span className="text-[#5FC4E6]">cool</span>
           </h1>
@@ -127,6 +129,7 @@ export default function Contact() {
                 />
               </svg>
             </a>
+            
           </div>
         </div>
         {/* Form div */}
