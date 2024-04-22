@@ -4,11 +4,11 @@ import TechStack from "./components/TechStack";
 
 function App() {
   return (
-   <div className="w-full pt-10 space-y-20">
-    <Agence />
-    <Services />
-    <TechStack />
-   </div>
+    <div className="w-full pt-10 space-y-20">
+      <Agence />
+      <Services />
+      <TechStack />
+    </div>
   );
 }
 
