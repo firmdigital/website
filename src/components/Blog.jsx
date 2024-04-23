@@ -41,13 +41,14 @@ const jobOpenings = [
   },
 ]
 
-export default function Blogs({ setClose }) {
+export default function Blogs() {
   const [showAlert, setShowAlert] = useState(false);
   const [selectBlogId, setSelectedBlogId] = useState(null);
   const [open, setOpen] = useState(true);
 
   const openModal = (blogId) => {
     setSelectedBlogId(blogId);
+    setOpen(true);
   };
 
   const closeModal = () => {
@@ -208,7 +209,7 @@ export default function Blogs({ setClose }) {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative w-full md:max-w-[95%] lg:max-w-[60%] h-full transform overflow-auto rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:p-6">
+                  <Dialog.Panel className="relative w-full md:max-w-[95%] lg:max-w-[60%] h-full sm:max-h-[95%] transform overflow-auto rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:p-6">
                     <div className="absolute right-0 top-0 pr-4 pt-4">
                       <button
                         type="button"
@@ -221,14 +222,14 @@ export default function Blogs({ setClose }) {
                     </div>
                     <div className="sm:flex sm:items-start">
                       
-                      <div className="bg-white">
+                      <div className="bg-white py-10">
                         <div className="mx-auto max-w-7xl px-2 lg:px-8">
                           <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none">
                             <div className="w-full lg:flex-auto">
                               <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                                 {selectedBlog.title}
                               </h2>
-                              <p className="mt-6 sm:text-left text-justify text-base leading-8 text-gray-600">
+                              <p className="mt-6 text-base leading-8 text-gray-600">
                                 {selectedBlog.description}
                               </p>
                               <img
@@ -238,7 +239,7 @@ export default function Blogs({ setClose }) {
                               />
                             </div>
                             <div className="w-full lg:flex-auto">
-                              <ul className="-my-8 flex flex-col gap-5 sm:text-left text-justify">
+                              <ul className="-my-8 flex flex-col gap-5">
                                 <span className="text-gray-600 text-base">{selectedBlog.detail1}</span>
                                 <span className="text-gray-600 text-base">{selectedBlog.detail2}</span>
                                 <span className="text-gray-600 text-base">{selectedBlog.detail3}</span>
