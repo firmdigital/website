@@ -71,9 +71,9 @@ export default function Contact() {
 
   return (
     <div id="contact" className="relative isolate bg-slate-50 md:p-10 p-5 mb-20 mx-auto max-w-5xl rounded-2xl">
-      <div className="flex items-start h-full w-full min-h-full md:flex-row flex-col gap-10">
+      <div className="flex items-start h-full w-full min-h-full lg:flex-row flex-col gap-10">
         {/* Contact info */}
-        <div className="flex flex-col gap-4 relative w-full h-full md:w-2/5">
+        <div className="flex flex-col gap-4 relative w-full h-full lg:w-2/5">
           <h1 className="font-bold text-gray-700 lg:text-3xl text-xl">
             Discutons ensemble de quelque chose de{" "}
             <span className="text-[#5FC4E6]">cool</span>
@@ -133,7 +133,7 @@ export default function Contact() {
           </div>
         </div>
         {/* Form div */}
-        <div className="flex-1 md:w-3/5 w-full bg-white shadow-xl shadow-slate-200 h-full min-h-full rounded-xl p-4">
+        <div className="flex-1 lg:w-3/5 w-full bg-white shadow-xl shadow-slate-200 h-full min-h-full rounded-xl p-4">
           {/* Form */}
           <form ref={form} onSubmit={sendEmail} method="POST">
             <div className="mb-10">
@@ -156,7 +156,7 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-            <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+            <div className="mx-auto lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label
