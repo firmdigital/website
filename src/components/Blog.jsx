@@ -137,7 +137,7 @@ export default function Blogs({ setClose }) {
                         </span>
                       </div>
                       <div className="flex items-start justify-between gap-10">
-                        <h4 className="font-semibold text-lg break-all line-clamp-2">
+                        <h4 className="font-semibold text-lg">
                           {blog.title}
                         </h4>
                       </div>
@@ -208,11 +208,11 @@ export default function Blogs({ setClose }) {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative w-full md:max-w-[95%] lg:max-w-[60%] h-[90%] transform overflow-auto rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:p-6">
-                    <div className="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+                  <Dialog.Panel className="relative w-full md:max-w-[95%] lg:max-w-[60%] h-full transform overflow-auto rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:p-6">
+                    <div className="absolute right-0 top-0 pr-4 pt-4">
                       <button
                         type="button"
-                        className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                        className="rounded-md bg-gray-200 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                         onClick={() => setOpen(false)}
                       >
                         <span className="sr-only">Close</span>
@@ -222,13 +222,13 @@ export default function Blogs({ setClose }) {
                     <div className="sm:flex sm:items-start">
                       
                       <div className="bg-white">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto max-w-7xl px-2 lg:px-8">
                           <div className="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none">
                             <div className="w-full lg:flex-auto">
-                              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                              <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                                 {selectedBlog.title}
                               </h2>
-                              <p className="mt-6 text-xl leading-8 text-gray-600">
+                              <p className="mt-6 sm:text-left text-justify text-base leading-8 text-gray-600">
                                 {selectedBlog.description}
                               </p>
                               <img
@@ -238,16 +238,16 @@ export default function Blogs({ setClose }) {
                               />
                             </div>
                             <div className="w-full lg:flex-auto">
-                              <ul className="-my-8 flex flex-col gap-5">
-                                <span className="text-gray-600">{selectedBlog.detail1}</span>
-                                <span className="text-gray-600">{selectedBlog.detail2}</span>
-                                <span className="text-gray-600">{selectedBlog.detail3}</span>
-                                <span className="text-gray-800">{selectedBlog.conclusion}</span>
+                              <ul className="-my-8 flex flex-col gap-5 sm:text-left text-justify">
+                                <span className="text-gray-600 text-base">{selectedBlog.detail1}</span>
+                                <span className="text-gray-600 text-base">{selectedBlog.detail2}</span>
+                                <span className="text-gray-600 text-base">{selectedBlog.detail3}</span>
+                                <span className="text-gray-800 text-base">{selectedBlog.conclusion}</span>
                               </ul>
                               <div className="mt-8 flex border-t border-gray-100 pt-8">
                                 <a
                                   href="#"
-                                  className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                                  className="text-sm font-semibold leading-6 text-[#5FC4E6]"
                                 >
                                   Publié le : {selectedBlog.date}{" "}
                                 </a>
