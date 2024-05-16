@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AlertModal from "./Alert";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function SoSecuriGaz() {
   const [showAlert, setShowAlert] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -57,7 +63,7 @@ export default function SoSecuriGaz() {
                   </div>
                 </div>
               </div>
-              <div className="mt-16 flex sm:mt-24 items-center justify-center">
+              <div data-aos="zoom-out" data-aos-duration="3000" className="mt-16 flex sm:mt-24 items-center justify-center">
                 <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <img
                     src="../assets/sosecurigaz.png"
