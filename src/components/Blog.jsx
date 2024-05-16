@@ -5,41 +5,9 @@ import "aos/dist/aos.css";
 import { blogs } from "../utils/Blogs.ts";
 import { Dialog, Transition } from "@headlessui/react";
 import {
-  ExclamationTriangleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-
-
-const jobOpenings = [
-  {
-    id: 1,
-    role: 'Full-time designer',
-    href: '#',
-    description:
-      'Quos sunt ad dolore ullam qui. Enim et quisquam dicta molestias. Corrupti quo voluptatum eligendi autem labore.',
-    salary: '$75,000 USD',
-    location: 'San Francisco, CA',
-  },
-  {
-    id: 2,
-    role: 'Laravel developer',
-    href: '#',
-    description:
-      'Et veniam et officia dolorum rerum. Et voluptas consequatur magni sapiente amet voluptates dolorum. Ut porro aut eveniet.',
-    salary: '$125,000 USD',
-    location: 'San Francisco, CA',
-  },
-  {
-    id: 3,
-    role: 'React Native developer',
-    href: '#',
-    description:
-      'Veniam ipsam nisi quas architecto eos non voluptatem in nemo. Est occaecati nihil omnis delectus illum est.',
-    salary: '$105,000 USD',
-    location: 'San Francisco, CA',
-  },
-]
 
 export default function Blogs() {
   const [showAlert, setShowAlert] = useState(false);
