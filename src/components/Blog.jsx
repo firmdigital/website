@@ -82,7 +82,9 @@ export default function Blogs() {
           <div className="-mt-80">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto grid grid-cols-1 gap-8 lg:max-w-4xl sm:grid-cols-2">
-                {blogs.map((blog) => (
+                {blogs
+                .filter((i) => i.id <= 2)
+                .map((blog) => (
                   <div
                     key={blog.id}
                     data-aos="fade-down"
