@@ -26,7 +26,7 @@ function Hero() {
             <div className="flex flex-col lg:items-start items-center justify-center gap-6 lg:justify-evenly">
               <h1 className="md:text-5xl text-3xl lg:text-left text-center text-gray-700">
                 Construisons ensemble vos <br />
-                <span className="bg-gradient-to-r py-1 font-extrabold from-[#5FC4E6] to-orange-500 inline-block text-transparent bg-clip-text">
+                <span className="bg-gradient-to-r py-1 font-black from-[#5FC4E6] to-orange-500 inline-block text-transparent bg-clip-text">
                   projets digitaux.
                 </span>
               </h1>

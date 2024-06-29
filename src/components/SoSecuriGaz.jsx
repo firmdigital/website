@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import AlertModal from "./Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CardBody, CardContainer, CardItem } from "./UI/VideoSogaz.tsx";
+import DemoVideo from "./DemoVideo.jsx";
 
 export default function SoSecuriGaz() {
   const [showAlert, setShowAlert] = useState(false);
@@ -28,7 +30,7 @@ export default function SoSecuriGaz() {
               }}
             />
           </div>
-          <div id="project" className="py-24 sm:py-32 lg:pb-40">
+          <div id="project" className="">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
@@ -89,6 +91,7 @@ export default function SoSecuriGaz() {
             />
           </div>
         </div>
+        <DemoVideo />
       </div>
     </>
   );

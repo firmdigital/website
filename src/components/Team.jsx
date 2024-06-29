@@ -54,7 +54,7 @@ const posts = [
   {
     id: 3,
     fullname: "Fatoumata THIAM",
-    position: "Ingénieur electronicienne",
+    position: "Electronicienne",
     imageUrl:
       "./assets/team/Thiam.jpg",
     social: [
