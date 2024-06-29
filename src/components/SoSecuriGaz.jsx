@@ -3,6 +3,7 @@ import AlertModal from "./Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { CardBody, CardContainer, CardItem } from "./UI/VideoSogaz.tsx";
+import DemoVideo from "./DemoVideo.jsx";
 
 export default function SoSecuriGaz() {
   const [showAlert, setShowAlert] = useState(false);
@@ -29,7 +30,7 @@ export default function SoSecuriGaz() {
               }}
             />
           </div>
-          <div id="project" className="py-24 sm:py-32 lg:pb-40">
+          <div id="project" className="">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
@@ -90,28 +91,7 @@ export default function SoSecuriGaz() {
             />
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <CardContainer className="inter-var mx-4">
-            <CardBody className="bg-gray-50 relative group/card rounded-xl p-6 border">
-              <CardItem
-                translateZ="50"
-                className="text-xl max-w-xs font-bold text-neutral-600"
-              >
-                Vidéo de démonstration du KIT SO SECURIGAZ
-              </CardItem>
-              <CardItem
-                translateZ="100"
-                rotateX={2}
-                rotateZ={0}
-                className="w-full mt-4"
-              >
-                <video autoPlay muted className="rounded-lg border-4 border-gray-300" width="900" controls height="500">
-                  <source src="../assets/video/demo-video.mp4" type="video/mp4" />
-                </video>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-        </div>
+        <DemoVideo />
       </div>
     </>
   );
