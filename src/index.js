@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SoSecuriGaz from './components/SoSecuriGaz';
 import FeaturesGaZ from './components/FeaturesGaZ';
-// import NewsLetter from './components/NewsLetter';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Team from './components/Team';
@@ -28,7 +27,6 @@ root.render(
     <Blogs />
     <Team />
     <Contact />
-    {/* <NewsLetter /> */}
     <Footer />
     <BackToTopButton />
   </React.StrictMode>
