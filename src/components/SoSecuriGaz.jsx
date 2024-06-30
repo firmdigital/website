@@ -16,7 +16,7 @@ export default function SoSecuriGaz() {
     <>
       {showAlert && <AlertModal setClose={setShowAlert} />}
 
-      <div className="bg-white">
+      <div className="bg-white py-20">
         <div className="relative isolate">
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -30,7 +30,7 @@ export default function SoSecuriGaz() {
               }}
             />
           </div>
-          <div id="project" className="">
+          <div id="project">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
@@ -90,8 +90,8 @@ export default function SoSecuriGaz() {
               }}
             />
           </div>
+          <DemoVideo />
         </div>
-        <DemoVideo />
       </div>
     </>
   );

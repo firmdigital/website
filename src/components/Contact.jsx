@@ -98,38 +98,24 @@ export default function Contact() {
           {/* Social network */}
           <div className="mt-5 flex items-center gap-3">
             <a
-              href="/"
+              href="https://www.linkedin.com/company/firmdigitalsarl/"
               className="bg-[#5FC4E6] hover:bg-orange-500 hover:scale-105 duration-300 transition-all hover:shadow-md p-3 flex items-center justify-center rounded-full"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                viewBox="0 0 1046.16 1000"
-              >
-                <path
-                  fill="currentColor"
-                  className="text-white"
-                  d="M237.485 1000V325.301H13.229V1000zM125.386 233.127c78.202 0 126.879-51.809 126.879-116.553C250.808 50.37 203.591-.001 126.87-.001C50.161-.001-.002 50.371-.002 116.574c0 64.747 48.665 116.553 123.924 116.553h1.457zM361.61 1000h224.256V623.215c0-20.165 1.457-40.309 7.379-54.724c16.212-40.289 53.111-82.017 115.06-82.017c81.149 0 113.613 61.872 113.613 152.572v360.949h224.242V613.129c0-207.241-110.636-303.668-258.183-303.668c-120.977 0-174.094 67.622-203.603 113.679h1.497v-97.853H361.615c2.943 63.31 0 674.699 0 674.699z"
-                />
-              </svg>
+              <svg className="text-white" xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3M447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z" /></svg>
             </a>
             <a
-              href="/"
+              href="https://www.facebook.com/firmdigitalsarl"
               className="bg-[#5FC4E6] hover:bg-orange-500 hover:scale-105 duration-300 transition-all hover:shadow-md p-3 flex items-center justify-center rounded-full"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                viewBox="0 0 1231.051 1000"
-              >
-                <path
-                  fill="currentColor"
-                  className="text-white"
-                  d="M1231.051 118.453q-51.422 76.487-126.173 130.403q.738 14.46.738 32.687q0 101.273-29.53 202.791q-29.53 101.519-90.215 194.343q-60.685 92.824-144.574 164.468q-83.889 71.644-201.677 114.25q-117.788 42.606-252.474 42.606q-210.2 0-387.147-113.493q31.406 3.495 60.242 3.495q175.605 0 313.687-108.177q-81.877-1.501-146.654-50.409q-64.777-48.907-89.156-124.988q24.097 4.59 47.566 4.59q33.782 0 66.482-8.812q-87.378-17.5-144.975-87.04q-57.595-69.539-57.595-160.523v-3.126q53.633 29.696 114.416 31.592q-51.762-34.508-82.079-89.999q-30.319-55.491-30.319-120.102q0-68.143 34.151-126.908q95.022 116.607 230.278 186.392q135.258 69.786 290.212 77.514q-6.609-27.543-6.621-57.485q0-104.546 73.994-178.534Q747.623 0 852.169 0q109.456 0 184.392 79.711q85.618-16.959 160.333-61.349q-28.785 90.59-110.933 139.768q75.502-8.972 145.088-39.677z"
-                />
-              </svg>
+              <svg className="text-white" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z" /></svg>
             </a>
-            
+            <a
+              href="https://www.facebook.com/firmdigitalsarl"
+              className="bg-[#5FC4E6] hover:bg-orange-500 hover:scale-105 duration-300 transition-all hover:shadow-md p-3 flex items-center justify-center rounded-full"
+            >
+              <svg fill="currentColor" className="text-white" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 320 512"><path fill="currentColor" d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8z" /></svg>
+            </a>
+
           </div>
         </div>
         {/* Form div */}
@@ -145,11 +131,10 @@ export default function Contact() {
                   <div
                     key={service.id}
                     onClick={() => handleServiceChange(service.id)}
-                    className={`cursor-pointer px-2 py-1 text-xs rounded ${
-                      selectedServices.includes(service.id)
-                        ? "bg-[#5FC4E6] py-1.5 text-white"
-                        : "border border-[#5FC4E6] text-[#5FC4E6]"
-                    }`}
+                    className={`cursor-pointer px-2 py-1 text-xs rounded hover:bg-[#5FC4E6] hover:text-white ${selectedServices.includes(service.id)
+                      ? "bg-[#5FC4E6] py-1.5 text-white"
+                      : "border border-[#5FC4E6] text-[#5FC4E6]"
+                      }`}
                   >
                     {service.name}
                   </div>
