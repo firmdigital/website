@@ -4,7 +4,7 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      id:1,
+      id: 1,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -18,7 +18,7 @@ const navigation = {
     },
     {
       name: "X",
-      id:3,
+      id: 3,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -28,7 +28,7 @@ const navigation = {
     },
     {
       name: "Linkedin",
-      id:4,
+      id: 4,
       href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
