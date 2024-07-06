@@ -11,8 +11,13 @@ export const navlinks = [
     },
     {
         id: 3,
-        name: 'Nos Projets',
-        href: '#project'
+        name: 'Nos Technologies',
+        href: '#tech'
+    },
+    {
+        id: 3,
+        name: 'So Securigaz',
+        href: '#gaz'
     },
     {
         id: 4,
