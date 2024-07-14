@@ -1,12 +1,15 @@
-import { useState } from "react";
-import AlertModal from "./Alert";
+import { useCallback, memo } from "react";
 
 function Hero() {
-  const [showAlert, setShowAlert] = useState(false);
+
+  const handleScroll = useCallback((id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth", // Active l'animation de défilement
+    });
+  }, []);
 
   return (
     <>
-      {showAlert && <AlertModal setClose={setShowAlert} />}
 
       <div className="relative mx-auto max-w-[1920px]">
         <div className="relative flex items-center justify-between">
@@ -42,9 +45,7 @@ function Hero() {
                 href="#about"
                 onClick={(e) => {
                   e.preventDefault(); // Empêche le comportement par défaut du lien
-                  document.getElementById("about").scrollIntoView({
-                    behavior: "smooth", // Active l'animation de défilement
-                  });
+                  handleScroll("about");
                 }}
                 className="relative w-fit py-5 cursor-pointer"
               >
@@ -68,7 +69,7 @@ function Hero() {
                   </svg>
                 </div>
                 <img
-                  src="../assets/brush.png"
+                  src="../assets/brush.webp"
                   alt=""
                   className="w-full absolute -bottom-2 -z-10 right-3"
                 />
@@ -101,9 +102,7 @@ function Hero() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault(); // Empêche le comportement par défaut du lien
-                document.getElementById("contact").scrollIntoView({
-                  behavior: "smooth", // Active l'animation de défilement
-                });
+                handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
@@ -131,9 +130,7 @@ function Hero() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault(); // Empêche le comportement par défaut du lien
-                document.getElementById("contact").scrollIntoView({
-                  behavior: "smooth", // Active l'animation de défilement
-                });
+                handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
@@ -161,9 +158,7 @@ function Hero() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault(); // Empêche le comportement par défaut du lien
-                document.getElementById("contact").scrollIntoView({
-                  behavior: "smooth", // Active l'animation de défilement
-                });
+                handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
             >
@@ -193,4 +188,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default memo(Hero);

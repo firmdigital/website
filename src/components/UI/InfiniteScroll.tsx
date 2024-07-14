@@ -85,7 +85,7 @@ export const InfiniteScroll = ({
                 {items.map((item, idx) => (
                     <li
                         className="max-w-full relative rounded-lg border-2 border-b-0 flex-shrink-0 px-8 py-2"
-                        key={item.name}
+                        key={idx}
                     >
                         <div>
                             <div

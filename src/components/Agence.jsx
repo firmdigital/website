@@ -1,10 +1,23 @@
+import { memo, useCallback } from "react";
+
 function Agence() {
+  const handleScroll = useCallback((e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   return (
     <div
       id="about"
-      className="w-full flex md:flex-row flex-col md:justify-between md:items-start md:gap-10 gap-5"
+      className="w-full flex lg:flex-row flex-col md:justify-between md:items-start md:gap-10 gap-5"
     >
-      <div className="flex flex-col gap-3 xl:max-w-[55%] md:max-w-[50%] max-w-full">
+      <div className="flex flex-col gap-3 xl:max-w-[55%] lg:max-w-[50%] max-w-full">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           DÉCOUVREZ
         </span>
@@ -31,6 +44,7 @@ function Agence() {
 
         <a
           href="/"
+          onClick={handleScroll}
           className="mt-10 py-1.5 px-4 bg-[#5FC4E6] w-fit flex items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-500/40 hover:bg-orange-500"
         >
           <span className="text-white text-sm">Je veux en savoir plus</span>
@@ -52,8 +66,8 @@ function Agence() {
       </div>
       <div className="w-full relative md:border-2 rounded-lg md:border-[#5FC4E6] h-96">
         <img
-          src="../assets/hero.png"
-          alt=""
+          src="../assets/hero.webp"
+          alt="Image de l'agence"
           className="object-cover h-full w-full md:absolute md:top-5 md:right-5 rounded-lg transition-all duration-300 md:hover:top-0 md:hover:right-0 md:hover:rounded-md md:hover:scale-95"
         />
       </div>
@@ -61,4 +75,4 @@ function Agence() {
   );
 }
 
-export default Agence;
+export default memo(Agence);
