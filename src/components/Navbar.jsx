@@ -19,17 +19,19 @@ function Navbar() {
       { threshold: 0.7 }
     );
 
-    const sections = document.querySelectorAll(
-      "about",
-      "service",
-      "contact",
-      "project",
-      "blog"
-    );
+    const sections = document.querySelectorAll("#about, #service, #contact, #project, #blog");
 
-    sections.forEach((section) => {
-      sectionActive.observe(section);
-    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        sections.forEach((section) => {
+          sectionActive.observe(section);
+        });
+      });
+    } else {
+      sections.forEach((section) => {
+        sectionActive.observe(section);
+      });
+    }
 
     return () => {
       sections.forEach((section) => {
@@ -66,7 +68,8 @@ function Navbar() {
             alt="logo"
             width={100}
             height={100}
-            src="../assets/firm-digital-logo.png"
+            src="../assets/firm-digital-logo.webp"
+            loading="lazy"
           />
         </a>
         <div className="flex items-center lg:gap-10 gap-10">
@@ -105,7 +108,9 @@ function Navbar() {
             });
             setMobileMenu(false);
           }}
-          className="button-contact text-sm font-normal bg-[#5FC4E6] rounded-full flex items-center justify-center gap-2 px-4 py-2">
+          className="button-contact text-sm font-normal bg-[#5FC4E6] rounded-full flex items-center justify-center gap-2 px-4 py-2"
+          rel="noopener noreferrer"
+        >
           Nous Contacter
           <svg fill="currentColor" viewBox="0 0 24 24" className="w-6">
             <path clipRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fillRule="evenodd"></path>
@@ -124,7 +129,8 @@ function Navbar() {
               alt="logo"
               width={80}
               height={80}
-              src="../assets/firm-digital-logo.png"
+              src="../assets/firm-digital-logo.webp"
+              loading="lazy"
             />
           </a>
 
@@ -166,7 +172,8 @@ function Navbar() {
                     alt="logo"
                     width={100}
                     height={100}
-                    src="../assets/firm-digital-logo.png"
+                    src="../assets/firm-digital-logo.webp"
+                    loading="lazy"
                   />
                 </a>
                 <svg
@@ -222,7 +229,9 @@ function Navbar() {
                   });
                   setMobileMenu(false);
                 }}
-                className="button-contact w-fit text-sm font-normal bg-[#5FC4E6] rounded-full flex items-center justify-center gap-2 px-4 py-2">
+                className="button-contact w-fit text-sm font-normal bg-[#5FC4E6] rounded-full flex items-center justify-center gap-2 px-4 py-2"
+                rel="noopener noreferrer"
+              >
                 Nous Contacter
                 <svg fill="currentColor" viewBox="0 0 24 24" className="w-6">
                   <path clipRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fillRule="evenodd"></path>

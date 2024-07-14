@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 import AlertModal from "./Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 
-export default function Blogs() {
+function Blogs() {
   const [showAlert, setShowAlert] = useState(false);
   const [selectBlogId, setSelectedBlogId] = useState(null);
   const [open, setOpen] = useState(true);
@@ -238,3 +238,4 @@ export default function Blogs() {
     </>
   );
 }
+export default memo(Blogs);

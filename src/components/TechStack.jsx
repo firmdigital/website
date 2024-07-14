@@ -1,49 +1,16 @@
+import { memo } from "react";
 import { InfiniteScroll } from "./UI/InfiniteScroll.tsx";
 
-// const tech = [
-//   { id: 1, name: "Java Script", logo: "../assets/tech/script-java.png" },
-//   { id: 2, name: "Python", logo: "../assets/tech/python.png" },
-//   { id: 3, name: "Php", logo: "../assets/tech/php.png" },
-//   { id: 4, name: "Java", logo: "../assets/tech/java.png" },
-// ];
-
 const tech = [
-  {
-      picture:"./assets/tech/angular.png",
-      name: "Angular"
-  },
-  {
-      picture:"./assets/tech/figma.png",
-      name: "Figma"
-  },
-  {
-      picture:"./assets/tech/react.png",
-      name: "React Js"
-  },
-  {
-      picture:"./assets/tech/typescript.png",
-      name: "TypeScript"
-  },
-  {
-      picture:"./assets/tech/photoshop.png",
-      name: "Photoshop"
-  },
-  {
-      picture:"./assets/tech/springboot.png",
-      name: "Spring Boot"
-  },
-  {
-      picture:"./assets/tech/tailwind.png",
-      name: "Tailwind CSS"
-  },
-  {
-      picture:"./assets/tech/next.png",
-      name: "Next JS"
-  },
-  {
-      picture:"./assets/tech/flutter.png",
-      name: "Flutter"
-  },
+  { picture: "./assets/tech/angular.webp", name: "Angular" },
+  { picture: "./assets/tech/figma.webp", name: "Figma" },
+  { picture: "./assets/tech/react.webp", name: "React Js" },
+  { picture: "./assets/tech/typescript.webp", name: "TypeScript" },
+  { picture: "./assets/tech/photoshop.webp", name: "Photoshop" },
+  { picture: "./assets/tech/springboot.webp", name: "Spring Boot" },
+  { picture: "./assets/tech/tailwind.webp", name: "Tailwind CSS" },
+  { picture: "./assets/tech/next.webp", name: "Next JS" },
+  { picture: "./assets/tech/flutter.webp", name: "Flutter" },
 ];
 
 function TechStack() {
@@ -53,16 +20,16 @@ function TechStack() {
         TECHNOLOGIES
       </span>
       <h4 className="md:text-5xl font-medium text-gray-700 sm:text-3xl text-2xl">
-        Decouvrez les
+        Découvrez les{" "}
         <span className="font-bold text-[#5FC4E6] hover:text-orange-500">
           TECHNOLOGIES
         </span>
         <br /> que nous utilisons quotidiennement
       </h4>
-      <div className="relative isolate overflow-hidden bg-slate-900 rounded-2xl shadow-sm shadow-slate-400  py-10">
+      <div className="relative isolate overflow-hidden bg-slate-900 rounded-2xl shadow-sm shadow-slate-400 py-10">
         <img
-          src="./assets/tech-bg.jpeg"
-          alt=""
+          src="./assets/tech-bg.webp"
+          alt="Background technologie"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-10"
         />
         <div className="relative mx-auto max-w-7xl">
@@ -75,4 +42,4 @@ function TechStack() {
   );
 }
 
-export default TechStack;
+export default memo(TechStack);

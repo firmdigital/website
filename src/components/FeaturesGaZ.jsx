@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Layout from "./Lajout";
 
 const features = [
@@ -23,7 +24,7 @@ const features = [
   },
 ];
 
-export default function FeatureGaZ() {
+function FeatureGaZ() {
   return (
     <Layout>
       <div className="relative isolate overflow-hidden rounded-2xl bg-gray-800 py-10">
@@ -73,3 +74,4 @@ export default function FeatureGaZ() {
     </Layout>
   );
 }
+export default memo(FeatureGaZ)
