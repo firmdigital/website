@@ -3,32 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Layout from './components/Lajout';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import SoSecuriGaz from './components/SoSecuriGaz';
-import FeaturesGaZ from './components/FeaturesGaZ';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import Team from './components/Team';
-import Blogs from './components/Blog';
-import BackToTopButton from './components/BackToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <Hero />
-    <Layout>
-      <App/>
-    </Layout>
-    <SoSecuriGaz />
-    <FeaturesGaZ />
-    <Blogs />
-    <Team />
-    <Contact />
-    <Footer />
-    <BackToTopButton />
+    <App />
   </React.StrictMode>
 );
 

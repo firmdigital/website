@@ -64,7 +64,7 @@ function SoSecuriGaz() {
                   </div>
                 </div>
               </div>
-              <div data-aos="zoom-out" data-aos-duration="3000" className="mt-16 flex sm:mt-24 items-center justify-center mx-4 sm:mx-8">
+              <div data-aos="zoom-out" data-aos-duration="3000" className="mt-16 flex sm:mt-24 items-center justify-center sm:mx-24 mx-6">
                 <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <img
                     src="../assets/sosecurigaz.webp"
