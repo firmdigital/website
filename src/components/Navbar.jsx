@@ -2,11 +2,19 @@ import { useEffect, useState } from "react";
 import { navlinks } from "../Navlinks";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeMenu, setActiveMenu] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setActiveMenu("");
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     const sectionActive = new IntersectionObserver(
@@ -59,12 +67,13 @@ function Navbar() {
   }, [mobileMenu]);
 
   const handleClick = (e, nav) => {
+    e.preventDefault();
+    setActiveMenu(nav.href);
+
     if (nav.href.startsWith("/")) {
       // Allow navigation for external routes
       navigate(nav.href);
     } else {
-      e.preventDefault();
-      setActiveMenu(nav.href);
       document
         ?.getElementById(nav.href.substring(1))
         ?.scrollIntoView({ behavior: "smooth" });
@@ -160,7 +169,7 @@ function Navbar() {
                     <Link
                       to={nav.href}
                       onClick={(e) => handleClick(e, nav)}
-                      className={`${activeMenu === nav.href && "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"} font-semibold text-base cursor-pointer`}
+                      className={`${activeMenu === nav.href && "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"} text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-sm hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
                     >
                       {nav.name}
                     </Link>

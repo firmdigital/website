@@ -1,16 +1,14 @@
 import { useCallback, memo } from "react";
 
 function Hero() {
-
   const handleScroll = useCallback((id) => {
     document.getElementById(id).scrollIntoView({
-      behavior: "smooth", // Active l'animation de défilement
+      behavior: "smooth",
     });
   }, []);
 
   return (
     <>
-
       <div className="relative mx-auto max-w-[1920px]">
         <div className="relative flex items-center justify-between">
           <div
@@ -25,9 +23,9 @@ function Hero() {
               }}
             />
           </div>
-          <div className="w-full md:pt-20 pt-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
+          <div className="w-full md:pt-20 pt-5 xl:px-48 md:px-8 px-4">
             <div className="flex flex-col lg:items-start items-center justify-center gap-6 lg:justify-evenly">
-              <h1 className="md:text-5xl text-3xl lg:text-left text-center text-gray-700">
+              <h1 className="md:text-4xl sm:text-3xl text-2xl lg:text-left text-center text-gray-700">
                 Construisons ensemble vos <br />
                 <span className="bg-gradient-to-r py-1 font-black from-[#5FC4E6] to-orange-500 inline-block text-transparent bg-clip-text">
                   projets digitaux.
@@ -44,7 +42,7 @@ function Hero() {
               <a
                 href="#about"
                 onClick={(e) => {
-                  e.preventDefault(); // Empêche le comportement par défaut du lien
+                  e.preventDefault();
                   handleScroll("about");
                 }}
                 className="relative w-fit py-5 cursor-pointer"
@@ -70,7 +68,7 @@ function Hero() {
                 </div>
                 <img
                   src="../assets/brush.webp"
-                  alt=""
+                  alt="Brush"
                   className="w-full absolute -bottom-2 -z-10 right-3"
                 />
               </a>
@@ -78,7 +76,7 @@ function Hero() {
           </div>
 
           <div className="w-full lg:block hidden">
-            <img src="../assets/build.svg" alt="" className="w-[70%]" />
+            <img src="../assets/build.svg" alt="Build" className="w-[70%]" />
           </div>
           <div
             className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -95,13 +93,12 @@ function Hero() {
         </div>
 
         {/* Call to action */}
-
         <div className="p-10 my-10 max-w-[1920px] xl:mx-48 md:mx-8 mx-4 bg-[#5FC4E6] shadow-lg rounded-lg shadow-slate-600/10">
           <div className="flex md:flex-row flex-col items-center gap-8 w-full">
             <a
               href="#contact"
               onClick={(e) => {
-                e.preventDefault(); // Empêche le comportement par défaut du lien
+                e.preventDefault();
                 handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
@@ -129,7 +126,7 @@ function Hero() {
             <a
               href="#contact"
               onClick={(e) => {
-                e.preventDefault(); // Empêche le comportement par défaut du lien
+                e.preventDefault();
                 handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"
@@ -157,7 +154,7 @@ function Hero() {
             <a
               href="#contact"
               onClick={(e) => {
-                e.preventDefault(); // Empêche le comportement par défaut du lien
+                e.preventDefault();
                 handleScroll("contact");
               }}
               className="hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-md hover:shadow-slate-500/20 hover:bg-slate-700 flex items-center justify-between gap-5 bg-white p-4 w-full rounded-md"

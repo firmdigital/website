@@ -15,7 +15,7 @@ const tech = [
 
 function TechStack() {
   return (
-    <div id="tech" className="w-full flex flex-col gap-4">
+    <div id="technologies" className="w-full flex flex-col gap-4">
       <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
         TECHNOLOGIES
       </span>

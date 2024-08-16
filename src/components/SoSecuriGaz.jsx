@@ -29,7 +29,7 @@ function SoSecuriGaz() {
               }}
             />
           </div>
-          <div id="gaz">
+          <div id="sosecurigaz">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">

@@ -1,8 +1,18 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import HeroBlog from '../components/Blogs/Hero'
+import Blog from '../components/Blogs/Blog'
+import Footer from '../components/Footer'
 
 function Blogs() {
   return (
-    <div>Blogs</div>
+    <>
+      <Layout>
+        <HeroBlog />
+        <Blog />
+      </Layout>
+      <Footer />
+    </>
   )
 }
 

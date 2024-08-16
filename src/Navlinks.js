@@ -2,22 +2,22 @@ export const navlinks = [
     {
         id: 1,
         name: 'A propos',
-        href: '/about'
+        href: '#about'
     },
     {
         id: 2,
         name: 'Nos services',
-        href: '/services'
+        href: '#services'
     },
     {
         id: 3,
         name: 'Nos Technologies',
-        href: '/technologies'
+        href: '#technologies'
     },
     {
         id: 4,
         name: 'So Securigaz',
-        href: '/sosecurigaz'
+        href: '#sosecurigaz'
     },
     {
         id: 5,

@@ -58,7 +58,7 @@ const services = [
 
 function Services() {
   return (
-    <div id="service" className="w-full">
+    <div id="services" className="w-full">
       <div className="flex flex-col items-center justify-center gap-6 py-10">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           NOS SERVICES

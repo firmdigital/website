@@ -14,6 +14,7 @@ import BackToTopButton from './components/BackToTop';
 import Agence from './components/Agence';
 import Services from './components/Services';
 import TechStack from './components/TechStack';
+import BlogSection from './components/Blog';
 
 ReactGA.initialize('G-9L1YRG75J3');
 
@@ -34,6 +35,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <BackToTopButton />
       <Routes>
         <Route path="/" element={
           <>
@@ -47,10 +49,10 @@ function App() {
             </Layout>
             <SoSecuriGaz />
             <FeaturesGaZ />
+            <BlogSection />
             <Team />
             <Contact />
             <Footer />
-            <BackToTopButton />
           </>
         } />
         <Route path="/blogs" element={<Blogs />} />
