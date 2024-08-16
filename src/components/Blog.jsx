@@ -7,10 +7,10 @@ import { Dialog, Transition } from "@headlessui/react";
 import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 
-function Blogs() {
-  const [showAlert, setShowAlert] = useState(false);
+function BlogSection() {
   const [selectBlogId, setSelectedBlogId] = useState(null);
   const [open, setOpen] = useState(true);
 
@@ -36,7 +36,6 @@ function Blogs() {
 
   return (
     <>
-      {showAlert && <AlertModal setClose={setShowAlert} />}
 
       <div id="blog" className="isolate mt-32 overflow-hidden bg-gray-900">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
@@ -137,13 +136,13 @@ function Blogs() {
                       articles dès maintenant !
                     </p>
                   </div>
-                  <div
-                    onClick={() => setShowAlert(true)}
+                  <Link
+                    to="/blogs"
                     className="rounded-md cursor-pointer hover:-translate-y-1 transition-all duration-300 px-3.5 py-2 text-sm font-semibold leading-6 text-[#449ab7] ring-1 ring-inset ring-[#449ab7]/30 hover:ring-[#449ab7]/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#449ab7]"
                   >
                     Voir tous nos articles{" "}
                     <span aria-hidden="true">&rarr;</span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -238,4 +237,4 @@ function Blogs() {
     </>
   );
 }
-export default memo(Blogs);
+export default memo(BlogSection);

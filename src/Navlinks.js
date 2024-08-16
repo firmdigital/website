@@ -7,21 +7,21 @@ export const navlinks = [
     {
         id: 2,
         name: 'Nos services',
-        href: '#service'
+        href: '#services'
     },
     {
         id: 3,
         name: 'Nos Technologies',
-        href: '#tech'
-    },
-    {
-        id: 3,
-        name: 'So Securigaz',
-        href: '#gaz'
+        href: '#technologies'
     },
     {
         id: 4,
+        name: 'So Securigaz',
+        href: '#sosecurigaz'
+    },
+    {
+        id: 5,
         name: 'Blogs',
-        href: '#blog'
+        href: '/blogs'
     },
 ]

@@ -29,7 +29,7 @@ function SoSecuriGaz() {
               }}
             />
           </div>
-          <div id="gaz">
+          <div id="sosecurigaz">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-2xl text-center">
                 <span className="bg-[#5FC4E6]/30 py-1.5 items-center px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
@@ -64,7 +64,7 @@ function SoSecuriGaz() {
                   </div>
                 </div>
               </div>
-              <div data-aos="zoom-out" data-aos-duration="3000" className="mt-16 flex sm:mt-24 items-center justify-center mx-4 sm:mx-8">
+              <div data-aos="zoom-out" data-aos-duration="3000" className="mt-16 flex sm:mt-24 items-center justify-center sm:mx-24 mx-6">
                 <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <img
                     src="../assets/sosecurigaz.webp"

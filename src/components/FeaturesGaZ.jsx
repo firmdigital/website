@@ -1,5 +1,5 @@
 import { memo } from "react";
-import Layout from "./Lajout";
+import Layout from "./Layout";
 
 const features = [
   {
