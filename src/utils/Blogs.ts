@@ -23,7 +23,7 @@ export const blogs = [
     detail1: "L'événement, qui s'est tenu du 18 au 20 juillet au Centre International de Conférences de Bamako (CICB) sous le thème ``Souveraineté numérique, Défis et opportunités``, a été une occasion incroyable pour nous de présenter notre projet innovant, SO SECURIGAZ.",
     detail2: "SO SECURIGAZ est un système révolutionnaire de détection de fuite de gaz qui alerte le propriétaire via SMS, appel et signal sonore, garantissant ainsi la sécurité et la tranquillité d'esprit de nos utilisateurs.",
     detail3: "Ce prix est une reconnaissance de notre engagement à offrir des solutions digitales de pointe qui répondent aux besoins critiques de notre société. Nous remercions tous nos partenaires et supporters pour leur confiance et leur soutien indéfectible.",
-    conclusion: "🎉 Bravo à toute l'équipe de FIRM DIGITAL ! 🎉 Ensemble, continuons à repousser les limites de l'innovation et à transformer les défis en opportunités.",
+    conclusion: "Bravo à toute l'équipe de FIRM DIGITAL ! Ensemble, continuons à repousser les limites de l'innovation et à transformer les défis en opportunités.",
     description:
       "Nous sommes extrêmement fiers d'annoncer que FIRM DIGITAL a remporté le 1er prix ainsi que le prix de la meilleure solution digitale lors de la 4e édition des Mali Digital Awards ! ",
   },

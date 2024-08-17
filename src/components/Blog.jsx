@@ -1,5 +1,4 @@
 import { Fragment, memo, useEffect, useState } from "react";
-import AlertModal from "./Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { blogs } from "../utils/Blogs.ts";

@@ -82,7 +82,7 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full bg-transparent -z-50 py-5 mx-auto max-w-[1920px] xl:px-48 md:px-8 px-4">
+    <div className="w-full bg-transparent -z-50 py-5 mx-auto max-w-[1920px] xl:px-16 md:px-8 px-4">
       {/* Desktop Menu */}
       <nav className="lg:flex hidden w-full items-center justify-between gap-8">
         <Link to="/" className="hover:cursor-pointer transition-all duration-500 hover:scale-110">
@@ -94,7 +94,7 @@ function Navbar() {
               <Link
                 to={nav.href}
                 onClick={(e) => handleClick(e, nav)}
-                className={`${activeMenu === nav.href && "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"} text-black cursor-pointer hover:text-[#5FC4E6] font-semibold text-sm hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
+                className={`${activeMenu === nav.href && "text-[#5FC4E6] font-semibold text-base border-b-[#5FC4E6] border-b-2 border-r-[#5FC4E6] border-r-2 shadow-lg p-2 rounded"} ${window.location.pathname !== '/' ? 'text-[#5FC4E6]' : 'text-white'}  cursor-pointer hover:text-[#5FC4E6] font-semibold text-sm hover:border-b-[#5FC4E6] hover:border-b hover:border-r-[#5FC4E6] hover:border-r hover:p-2 hover:rounded hover:scale-95 transition-all duration-300`}
               >
                 {nav.name}
               </Link>
@@ -128,7 +128,7 @@ function Navbar() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8 text-[#5FC4E6] font-extrabold cursor-pointer transition-all duration-500 hover:scale-95"
+            className="w-8 h-8 text-white bg-[#5FC4E6] rounded-lg p-1 font-extrabold cursor-pointer transition-all duration-500 hover:scale-95"
             onClick={() => {
               setMobileMenu(!mobileMenu);
             }}
@@ -145,7 +145,7 @@ function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.5 }}
-              className="h-full min-h-full z-50 translate-x-[-0%] ease-in-out transition-all duration-500 bg-white absolute inset-0 p-5"
+              className="fixed inset-0 z-[9999] w-full h-full bg-white p-5"
             >
               <div className="flex items-center justify-between">
                 <Link to="/" className="hover:cursor-pointer transition-all duration-500 hover:scale-95">
@@ -157,7 +157,7 @@ function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-7 h-7 text-gray-100 bg-[#5FC4E6] rounded-full p-1 cursor-pointer transition-all duration-500 hover:scale-95"
+                  className="w-7 h-7 text-gray-100 bg-[#5FC4E6] rounded-lg p-1 cursor-pointer transition-all duration-500 hover:scale-95"
                   onClick={() => setMobileMenu(!mobileMenu)}
                 >
                   <path strokeWidth="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -191,6 +191,7 @@ function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </div>
   );

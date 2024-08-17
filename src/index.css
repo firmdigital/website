@@ -158,3 +158,22 @@ body {
         left: 100%;
     }
 }
+
+@keyframes fadeDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-down {
+    animation: fadeDown 2s infinite;
+  }

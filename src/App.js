@@ -34,7 +34,6 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
       <BackToTopButton />
       <Routes>
         <Route path="/" element={
@@ -55,7 +54,13 @@ function App() {
             <Footer />
           </>
         } />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs" element={
+          <>
+            <Navbar />
+            <Blogs />
+          </>
+        }
+        />
       </Routes>
     </Router>
   );
