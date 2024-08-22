@@ -1,58 +1,54 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-// Import required modules
 import { EffectCoverflow } from "swiper/modules";
 import { memo } from "react";
 
-// Services data
 const services = [
   {
     id: 1,
     name: "DEVELOPPEMENT D'APPLICATION",
     description:
       "Plongez dans l'innovation numérique avec nos développeurs experts, créant des applications sur mesure qui transforment vos idées en réalité interactive.",
-    image: "../assets/services/appdev.png",
+    image: "../assets/services/appdev.webp",
   },
   {
     id: 2,
     name: "UX UI DESIGN",
     description:
       "Redéfinissez l'expérience utilisateur à travers des interfaces élégantes et des designs intuitifs, offrant une immersion visuelle qui captive et engage.",
-    image: "../assets/services/uxui.png",
+    image: "../assets/services/uxui.webp",
   },
   {
     id: 3,
     name: "Community Management",
     description:
       "Cultivez des connexions significatives avec votre audience grâce à notre gestion de communauté experte, stimulant l'engagement et renforçant la présence en ligne de votre marque.",
-    image: "../assets/services/cm.png",
+    image: "../assets/services/cm.webp",
   },
   {
     id: 4,
     name: "Électronique et Systèmes Embarqués",
     description:
       "Explorez l'avant-garde de la technologie avec notre expertise en électronique et systèmes embarqués, offrant des solutions innovantes pour propulser votre entreprise vers l'avenir.",
-    image: "../assets/services/electronique.png",
+    image: "../assets/services/electronique.webp",
   },
   {
     id: 5,
     name: "Design 3D",
     description:
       "Explorez un monde tridimensionnel captivant, où notre équipe de designers donne vie à vos concepts avec une profondeur visuelle et une créativité époustouflantes.",
-    image: "../assets/services/3d.png",
+    image: "../assets/services/3d.webp",
   },
   {
     id: 6,
     name: "DESIGN GRAPHIQUE",
     description:
       "Fusionnez esthétique et communication visuelle de manière exceptionnelle, grâce à notre expertise en design graphique qui transforme votre identité en une œuvre d'art.",
-    image: "../assets/services/design.png",
+    image: "../assets/services/design.webp",
   },
 ];
 
@@ -92,6 +88,7 @@ function Services() {
                 <img
                   src={service.image}
                   alt={service.name}
+                  loading="lazy"
                   className="object-cover lg:w-[70%] md:w-full aspect-square object-fit-cover"
                 />
               </div>

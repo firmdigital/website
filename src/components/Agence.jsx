@@ -68,6 +68,7 @@ function Agence() {
         <img
           src="../assets/hero.webp"
           alt="Image de l'agence"
+          loading="lazy"
           className="object-cover h-full w-full md:absolute md:top-5 md:right-5 rounded-lg transition-all duration-300 md:hover:top-0 md:hover:right-0 md:hover:rounded-md md:hover:scale-95"
         />
       </div>

@@ -14,7 +14,7 @@ const posts = [
     fullname: "Manuela ALOKPO",
     position: "Gérante",
     imageUrl:
-      "./assets/team/Alokpo-profil.png",
+      "./assets/team/Alokpo-profil.webp",
     social: [
       {
         name: "linkedin",
@@ -32,7 +32,7 @@ const posts = [
     id: 2,
     fullname: "Mohamed Lamine KONE",
     position: "Développeur Fullstack",
-    imageUrl: "./assets/team/Malla.png",
+    imageUrl: "./assets/team/Malla.webp",
     social: [
       {
         name: "linkedin",
@@ -56,7 +56,7 @@ const posts = [
     fullname: "Fatoumata THIAM",
     position: "Electronicienne",
     imageUrl:
-      "./assets/team/Thiam.jpg",
+      "./assets/team/Thiam.webp",
     social: [
       {
         name: "linkedin",
@@ -70,7 +70,7 @@ const posts = [
     fullname: "Sidi Yaya SIMAGA",
     position: "Développeur Fullstack",
     imageUrl:
-      "./assets/team/Simaga.jpg",
+      "./assets/team/Simaga.webp",
     social: [
       {
         name: "linkedin",
