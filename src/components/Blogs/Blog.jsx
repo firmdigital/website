@@ -30,7 +30,7 @@ function Blog() {
     return (
         <>
             <Layout>
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center mb-20'>
                     <p className='text-center md:text-2xl text-xl text-gray-700 py-10 mt-5 md:max-w-3xl font-semibold'>
                         Transformez votre quotidien avec nos articles inspirants et nos
                         astuces pratiques. Lire notre blog, c&apos;est ouvrir une porte vers
@@ -38,7 +38,7 @@ function Blog() {
                     </p>
 
                     <div className="flow-root bg-white md:my-16 my-5">
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             {blogs
                                 .map((blog) => (
                                     <div

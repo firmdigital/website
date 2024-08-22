@@ -48,7 +48,7 @@ const BackToTopButton = () => {
           bottom: "20px",
           right: "20px",
           cursor: "pointer",
-          zIndex: "10",
+          zIndex: "50",
         }}
       >
         <svg className="svgIcon" viewBox="0 0 384 512">
