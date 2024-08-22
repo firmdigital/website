@@ -149,7 +149,7 @@ export default function Team() {
           ))}
         </div>
         {/* Mobile Servie */}
-        <div className="w-full flex sm:hidden py-10 px-8">
+        <div className="w-full flex sm:hidden py-10 sm:px-8 px-[15%]">
           <Swiper
             effect={"cards"}
             grabCursor={true}
