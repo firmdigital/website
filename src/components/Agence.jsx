@@ -15,7 +15,7 @@ function Agence() {
   return (
     <div
       id="about"
-      className="w-full flex lg:flex-row flex-col md:justify-between md:items-start md:gap-10 gap-5"
+      className="w-full flex lg:flex-row mt-24 flex-col md:justify-between md:items-start md:gap-10 gap-5"
     >
       <div className="flex flex-col gap-3 xl:max-w-[55%] lg:max-w-[50%] max-w-full">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
@@ -68,6 +68,7 @@ function Agence() {
         <img
           src="../assets/hero.webp"
           alt="Image de l'agence"
+          loading="lazy"
           className="object-cover h-full w-full md:absolute md:top-5 md:right-5 rounded-lg transition-all duration-300 md:hover:top-0 md:hover:right-0 md:hover:rounded-md md:hover:scale-95"
         />
       </div>
