@@ -41,7 +41,7 @@ function Hero() {
                 }}
               />
             </div>
-            <div className="w-full md:pt-20 pt-5 xl:px-16 md:px-8 px-4">
+            <div className="w-full lg:py-20 py-10 xl:px-16 md:px-8 px-4">
               <div className="flex flex-col lg:items-start items-center justify-center gap-6 lg:justify-evenly">
                 <h1 className="sm:text-3xl text-2xl xl:text-5xl lg:text-left text-center text-gray-200">
                   Construisons ensemble vos <br />
@@ -58,32 +58,30 @@ function Hero() {
                   diversifiés de ses clients.
                 </p>
                 <a
+                  id="more"
                   href="#about"
                   onClick={(e) => {
                     e.preventDefault();
                     handleScroll("about");
                   }}
-                  className="relative w-fit py-5 cursor-pointer"
                 >
-                  <div className="flex items-center gap-4 bg-[#5FC4E6] p-2 rounded-md">
-                    <span className="font-semibold text-slate-200 ml-2 text-sm">
-                      En Savoir Plus
-                    </span>{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6 text-white"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                      />
-                    </svg>
-                  </div>
+                  <span>
+                    En savoir plus
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -91,7 +89,7 @@ function Hero() {
             <div className="w-full lg:block hidden -mr-40 p-10">
               <img
                 src="../assets/img/header-img.svg"
-                alt="header-img"
+                alt="header img"
                 className="w-[70%] fade-down" />
             </div>
             <div

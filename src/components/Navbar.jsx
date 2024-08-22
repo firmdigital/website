@@ -69,17 +69,20 @@ function Navbar() {
   const handleClick = (e, nav) => {
     e.preventDefault();
     setActiveMenu(nav.href);
-
+  
     if (nav.href.startsWith("/")) {
-      // Allow navigation for external routes
       navigate(nav.href);
     } else {
-      document
-        ?.getElementById(nav.href.substring(1))
-        ?.scrollIntoView({ behavior: "smooth" });
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
+      }
+      setTimeout(() => {
+        document.getElementById(nav.href.substring(1))?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }
     setMobileMenu(false);
   };
+  
 
   return (
     <div className="w-full bg-transparent -z-50 py-5 mx-auto max-w-[1920px] xl:px-16 md:px-8 px-4">
