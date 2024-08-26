@@ -30,3 +30,15 @@ jobs:
       run: |
         npm install
         npm run build
+    # - name: Update Public Html folder
+    #   run: |
+    #     rm -rf ~/public_html/*
+    #     cp -r build/* ~/public_html/
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}
+        username: ${{ secrets.GIT_CPANEL_REACT_USER }}
+        password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
+        protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
+        local-dir: ./build/
