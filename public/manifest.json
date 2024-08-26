@@ -3,18 +3,18 @@
   "name": "FIRM DIGITAL SARL est une entreprise dynamique opérant dans le domaine digital, offrant une gamme variée de services pour répondre aux besoins diversifiés de ses clients.",
   "icons": [
     {
-      "src": "./assets/faveicon.png",
+      "src": "./assets/faveicon.webp",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "./assets/faveicon.png",
-      "type": "image/png",
+      "src": "./assets/faveicon.webp",
+      "type": "image/webp",
       "sizes": "192x192"
     },
     {
-      "src": "./assets/faveicon.png",
-      "type": "image/png",
+      "src": "./assets/faveicon.webp",
+      "type": "image/webp",
       "sizes": "512x512"
     }
   ],

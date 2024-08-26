@@ -29,9 +29,10 @@ function FeatureGaZ() {
     <Layout>
       <div className="relative isolate overflow-hidden rounded-2xl bg-gray-800 py-10">
         <img
-          src="./assets/blog-digital-transformation.jpg"
+          src="./assets/blog-digital-transformation.webp"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-5"
+          loading="lazy"
         />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div
