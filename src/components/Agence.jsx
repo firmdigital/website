@@ -1,4 +1,6 @@
-import { memo, useCallback } from "react";
+import { memo, useCallback, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Agence() {
   const handleScroll = useCallback((e) => {
@@ -12,10 +14,16 @@ function Agence() {
     }
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div
       id="about"
       className="w-full flex lg:flex-row mt-24 flex-col md:justify-between md:items-start md:gap-10 gap-5"
+      data-aos="fade-up"
+      data-aos-duration="3000"
     >
       <div className="flex flex-col gap-3 xl:max-w-[55%] lg:max-w-[50%] max-w-full">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
