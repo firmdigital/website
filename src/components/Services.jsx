@@ -5,7 +5,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { EffectCoverflow } from "swiper/modules";
-import { memo } from "react";
+import { memo, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
@@ -53,8 +55,17 @@ const services = [
 ];
 
 function Services() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   return (
-    <div id="services" className="w-full">
+    <div id="services" className="w-full"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
       <div className="flex flex-col items-center justify-center gap-6 py-10">
         <span className="bg-[#5FC4E6]/30 py-1.5 px-6 w-fit rounded-full border border-[#5FC4E6] text-[10px] text-gray-500">
           NOS SERVICES
@@ -69,7 +80,7 @@ function Services() {
       </div>
 
       {/* Service cards for larger screens */}
-      <div className="hidden lg:grid gap-3 py-10 min-h-[200px]">
+      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="hidden lg:grid gap-3 py-10 min-h-[200px]">
         <div className="grid grid-cols-2 gap-3">
           {services.map((service) => (
             <div
@@ -147,4 +158,4 @@ function Services() {
   );
 }
 
-export default memo(Services) ;
+export default memo(Services);
