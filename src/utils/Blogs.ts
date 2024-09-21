@@ -18,7 +18,7 @@ export const blogs = [
     id: 2,
     href: "#",
     image:
-      "https://media.licdn.com/dms/image/D4D22AQFvWChHYdSqgw/feedshare-shrink_1280/0/1721638399362?e=1726704000&v=beta&t=lQBH1GZgDNFdbo387_i6AkZ4a2wgWPkK6NF6E429EuY",
+      "../assets/mali-digital-awards.webp",
     date: "20 juillet 2024",
     detail1: "L'événement, qui s'est tenu du 18 au 20 juillet au Centre International de Conférences de Bamako (CICB) sous le thème ``Souveraineté numérique, Défis et opportunités``, a été une occasion incroyable pour nous de présenter notre projet innovant, SO SECURIGAZ.",
     detail2: "SO SECURIGAZ est un système révolutionnaire de détection de fuite de gaz qui alerte le propriétaire via SMS, appel et signal sonore, garantissant ainsi la sécurité et la tranquillité d'esprit de nos utilisateurs.",
